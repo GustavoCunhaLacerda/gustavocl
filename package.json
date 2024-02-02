@@ -11,8 +11,28 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "nuxt": "^3.7.4",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@nuxtjs/eslint-module": "^4.1.0",
+    "@typescript-eslint/parser": "^6.18.1",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "nuxt": "^3.9.1",
+    "nuxt-primevue": "^0.2.2",
+    "postcss": "^8.4.33",
+    "prettier": "^3.2.1",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.7.17",
+    "@heroicons/vue": "^2.1.1",
+    "@vitejs/plugin-vue": "^5.0.3",
+    "primeicons": "^6.0.1",
+    "primevue": "^3.46.0",
+    "vue-tippy": "^6.4.1"
   }
 }
