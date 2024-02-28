@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-col items-center w-screen h-screen">
+  <div
+    class="flex flex-col items-center w-screen h-screen bg-white dark:bg-primaryBlue"
+  >
     <div class="max-w-[860px] w-full transition-all h-full">
       <NavBar></NavBar>
       <slot></slot>
