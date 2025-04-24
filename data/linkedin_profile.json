@@ -1,0 +1,878 @@
+{
+  "id": 847267042,
+  "urn": "ACoAADKAROIBUlfZwp5j5NrY8qYOpjVyBiIcnGI",
+  "username": "gustavocunhalacerda",
+  "firstName": "Gustavo",
+  "lastName": "Cunha Lacerda",
+  "isPremium": false,
+  "profilePicture": "https://media.licdn.com/dms/image/v2/D4D03AQFfID9_GEXBiA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1681128767327?e=1750896000&v=beta&t=3N2CHpkkzFuKE9ylGMFTpeszU8au2RMdVvZNaFCpG-U",
+  "profilePictures": [
+    {
+      "url": "https://media.licdn.com/dms/image/v2/D4D03AQFfID9_GEXBiA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1681128767327?e=1750896000&v=beta&t=ihq8vkRTo0fVY_iTgg1PeIjQ8tkrq6sk7-GSXf-NeZo",
+      "width": 100,
+      "height": 100
+    },
+    {
+      "url": "https://media.licdn.com/dms/image/v2/D4D03AQFfID9_GEXBiA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1681128767327?e=1750896000&v=beta&t=EwFKdDgMnAwZgUfDt9i-5xQE6S3UcVGNX0R2v0ybW44",
+      "width": 200,
+      "height": 200
+    },
+    {
+      "url": "https://media.licdn.com/dms/image/v2/D4D03AQFfID9_GEXBiA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1681128767327?e=1750896000&v=beta&t=5a0diguwFDhlpprrWp4feGLe8TK5ZdRLhnsNwkuimJg",
+      "width": 400,
+      "height": 400
+    },
+    {
+      "url": "https://media.licdn.com/dms/image/v2/D4D03AQFfID9_GEXBiA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1681128767327?e=1750896000&v=beta&t=3N2CHpkkzFuKE9ylGMFTpeszU8au2RMdVvZNaFCpG-U",
+      "width": 800,
+      "height": 800
+    }
+  ],
+  "backgroundImage": [
+    {
+      "width": 800,
+      "height": 200,
+      "url": "https://media.licdn.com/dms/image/v2/D4D16AQF_dadGPX-FTg/profile-displaybackgroundimage-shrink_200_800/profile-displaybackgroundimage-shrink_200_800/0/1706013058516?e=1750896000&v=beta&t=Xd3HIL6pQbEZwrB08PVpjUlFlVY3HXx24tmT39ZZAzQ"
+    },
+    {
+      "width": 1400,
+      "height": 350,
+      "url": "https://media.licdn.com/dms/image/v2/D4D16AQF_dadGPX-FTg/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1706013058516?e=1750896000&v=beta&t=AiOI_MaUPw_3JlexRbp4Qm1-H9ZiXayShvOSv7l1QCE"
+    }
+  ],
+  "summary": "\ud83d\udc4bOl\u00e1! Sou Gustavo Lacerda, desenvolvedor de software.\n\n\ud83d\udcabO meu objetivo \u00e9 utilizar a tecnologia para gerar solu\u00e7\u00f5es s\u00f3lidas e inovadoras para as empresas no qual eu trabalho.\n\n\ud83e\uddd1\u200d\ud83d\udcbcNas empresas que trabalhei atuei como desenvolvedor mobile, desenvolvedor frontend e atualmente estou trabalhando como desenvolvedor fullstack.\n\n\ud83d\udc68\u200d\ud83d\udcbbTenho conhecimento e experi\u00eancia com: JavaScript, TypeScript, CSS, HTML, SASS, Tailwind, Bootstrap, JQuery, Vue, Nuxt, React, React Native, C#, .Net5 e Python.",
+  "headline": "Analista de Sistemas | Desenvolvedor de Software | Full Stack | PHP - Vue - MySQL",
+  "geo": {
+    "country": "Brazil",
+    "city": "Bras\u00edlia, Federal District",
+    "full": "Bras\u00edlia, Federal District, Brazil",
+    "countryCode": "br"
+  },
+  "educations": [
+    {
+      "start": {
+        "year": 2019,
+        "month": 2,
+        "day": 0
+      },
+      "end": {
+        "year": 2023,
+        "month": 7,
+        "day": 0
+      },
+      "fieldOfStudy": "Ci\u00eancia da Computa\u00e7\u00e3o",
+      "degree": "Bacharel Ci\u00eancias da Computa\u00e7\u00e3o",
+      "grade": "8.67",
+      "schoolName": "IFB - Instituto Federal de Bras\u00edlia (Oficial)",
+      "description": "",
+      "activities": "",
+      "url": "https://www.linkedin.com/school/ifbrasiliaoficial/",
+      "schoolId": "11469381",
+      "logo": [
+        {
+          "url": "https://media.licdn.com/dms/image/v2/C4E0BAQFQJ_EGvN9Rmw/company-logo_200_200/company-logo_200_200/0/1657557187138/ifbrasiliaoficial_logo?e=1750896000&v=beta&t=x7-GYzvVPJJlzjy2oHAlExjilAgd0Bmb6ESQCtmpzvM",
+          "width": 200,
+          "height": 200
+        },
+        {
+          "url": "https://media.licdn.com/dms/image/v2/C4E0BAQFQJ_EGvN9Rmw/company-logo_100_100/company-logo_100_100/0/1657557187139/ifbrasiliaoficial_logo?e=1750896000&v=beta&t=xEsUFn_EBmJQgr-Di_VQLFN2sgsCYxLKS8HbWIe5Fyg",
+          "width": 100,
+          "height": 100
+        },
+        {
+          "url": "https://media.licdn.com/dms/image/v2/C4E0BAQFQJ_EGvN9Rmw/company-logo_400_400/company-logo_400_400/0/1657557187139/ifbrasiliaoficial_logo?e=1750896000&v=beta&t=a268Bdd97oElvnPZavVqxLYyZHhHtcDL43sUUsYgfQQ",
+          "width": 400,
+          "height": 400
+        }
+      ]
+    }
+  ],
+  "position": [
+    {
+      "companyId": 10790205,
+      "companyName": "DATAPREV",
+      "companyUsername": "dataprev-tecnologia",
+      "companyURL": "https://www.linkedin.com/company/dataprev-tecnologia/",
+      "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQGWpaYlhK22cA/company-logo_400_400/company-logo_400_400/0/1649266908446/dataprev_tecnologia_logo?e=1750896000&v=beta&t=gkakPx9jxRzQSn9q75ezzLTJDVaM8zvxKXVn6sXMBYM",
+      "companyIndustry": "Information Technology & Services",
+      "companyStaffCountRange": "1001 - 5000",
+      "title": "Analista de sistema",
+      "multiLocaleTitle": {
+        "pt_BR": "Analista de sistema"
+      },
+      "multiLocaleCompanyName": {
+        "pt_BR": "DATAPREV"
+      },
+      "location": "Bras\u00edlia, Distrito Federal, Brasil",
+      "description": "- Desenvolvimento de aplica\u00e7\u00f5es web robustas com PHP, jQuery, Bootstrap e MySQL, focadas em interfaces intuitivas e responsivas.\n- Cria\u00e7\u00e3o de APIs RESTful utilizando o Slim Framework (PHP), garantindo integra\u00e7\u00e3o eficiente entre sistemas.\n- Implementa\u00e7\u00e3o de interfaces front-end modernas e din\u00e2micas, utilizando o ecossistema Nuxt.js, com foco em performance e experi\u00eancia do usu\u00e1rio.",
+      "employmentType": "Full-time",
+      "start": {
+        "year": 2024,
+        "month": 6,
+        "day": 0
+      },
+      "end": {
+        "year": 0,
+        "month": 0,
+        "day": 0
+      }
+    },
+    {
+      "companyId": 15253095,
+      "companyName": "Medware Sistemas M\u00e9dicos",
+      "companyUsername": "medware-sistemas-m\u00e9dicos",
+      "companyURL": "https://www.linkedin.com/company/medware-sistemas-m%C3%A9dicos/",
+      "companyLogo": "https://media.licdn.com/dms/image/v2/D4D0BAQGsEWQgXSoLZQ/company-logo_400_400/company-logo_400_400/0/1666181809962/medware_sistemas_mdicos_logo?e=1750896000&v=beta&t=EZrJ-iVgNa7dbOeseNVc5FkB-aq8-_VaUzCEXa8lu2o",
+      "companyIndustry": "Computer Software",
+      "companyStaffCountRange": "11 - 50",
+      "title": "Desenvolvedor full stack",
+      "multiLocaleTitle": {
+        "pt_BR": "Desenvolvedor full stack"
+      },
+      "multiLocaleCompanyName": {
+        "pt_BR": "Medware Sistemas M\u00e9dicos"
+      },
+      "location": "Bras\u00edlia, Distrito Federal, Brasil",
+      "description": "- Cria\u00e7\u00e3o de solu\u00e7\u00f5es frontend e backend voltadas para o setor m\u00e9dico, empregando a stack .NET 5 e Nuxt.\n- Desenvolvimento de aplicativos internos para televis\u00f5es, utilizando a tecnologia React Native.\n- Desenvolvimento de testes unit\u00e1rios para garantir a qualidade e robustez das solu\u00e7\u00f5es desenvolvidas.\n- Entrega consistente de solu\u00e7\u00f5es eficientes e pela promo\u00e7\u00e3o da excel\u00eancia e organiza\u00e7\u00e3o dentro da equipe.",
+      "employmentType": "Full-time",
+      "start": {
+        "year": 2023,
+        "month": 11,
+        "day": 0
+      },
+      "end": {
+        "year": 2024,
+        "month": 5,
+        "day": 0
+      }
+    },
+    {
+      "companyId": 9374535,
+      "companyName": "Xpbox Digital",
+      "companyUsername": "xpboxdigital",
+      "companyURL": "https://www.linkedin.com/company/xpboxdigital/",
+      "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQE5zfPn8XCMng/company-logo_400_400/company-logo_400_400/0/1644445586999/xpbox_logo?e=1750896000&v=beta&t=-49cp4zzXirPFsEV6jinlYAw0zOZl65r2MmXSbO9RxQ",
+      "companyIndustry": "Information Technology & Services",
+      "companyStaffCountRange": "2 - 10",
+      "title": "Desenvolvedor de front-end",
+      "multiLocaleTitle": {
+        "pt_BR": "Desenvolvedor de front-end"
+      },
+      "multiLocaleCompanyName": {
+        "pt_BR": "Xpbox Digital"
+      },
+      "location": "Bras\u00edlia, Distrito Federal, Brasil",
+      "description": "- Cria\u00e7\u00e3o de interfaces de usu\u00e1rio profissionais e interativas.\n- Utiliza\u00e7\u00e3o de tecnologias como Vue.js e Tailwind CSS para desenvolver interfaces responsivas e de alta qualidade.\n- Transforma\u00e7\u00e3o de designs em c\u00f3digo HTML, CSS e JavaScript.\n- Foco na garantia de uma experi\u00eancia de usu\u00e1rio excepcional, priorizando a otimiza\u00e7\u00e3o de desempenho e escalabilidade.\n- Colabora\u00e7\u00e3o em equipe para o sucesso dos projetos e alcance dos objetivos da empresa.",
+      "employmentType": "Full-time",
+      "start": {
+        "year": 2023,
+        "month": 4,
+        "day": 0
+      },
+      "end": {
+        "year": 2023,
+        "month": 11,
+        "day": 0
+      }
+    },
+    {
+      "companyId": 41552,
+      "companyName": "Tribunal de Contas da Uni\u00e3o",
+      "companyUsername": "tribunal-de-contas-da-uniao",
+      "companyURL": "https://www.linkedin.com/company/tribunal-de-contas-da-uniao/",
+      "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQFo-NDD3EeRsQ/company-logo_400_400/company-logo_400_400/0/1631355040623?e=1750896000&v=beta&t=pEJ8p4CjI4kwsGkAN_hts8zuM9p8jrVB7SIqYVbnH9A",
+      "companyIndustry": "Government Administration",
+      "companyStaffCountRange": "1001 - 5000",
+      "title": "Desenvolvedor de aplicativos m\u00f3veis",
+      "multiLocaleTitle": {
+        "pt_BR": "Desenvolvedor de aplicativos m\u00f3veis"
+      },
+      "multiLocaleCompanyName": {
+        "pt_BR": "Tribunal de Contas da Uni\u00e3o"
+      },
+      "location": "Bras\u00edlia, Distrito Federal, Brasil",
+      "description": "- Desenvolvimento da aplica\u00e7\u00e3o, desde a fase inicial de prototipa\u00e7\u00e3o utilizando Figma at\u00e9 a implementa\u00e7\u00e3o e programa\u00e7\u00e3o utilizando React Native, al\u00e9m da integra\u00e7\u00e3o com tecnologias como Rest, Firebase e Axios.\n- Contribui\u00e7\u00e3o ativa no desenvolvimento de novas funcionalidades, adaptando a aplica\u00e7\u00e3o \u00e0s necessidades e feedback dos usu\u00e1rios.\n- Presta\u00e7\u00e3o de suporte direto aos usu\u00e1rios, oferecendo assist\u00eancia e informa\u00e7\u00f5es sobre a aplica\u00e7\u00e3o, garantindo uma experi\u00eancia satisfat\u00f3ria aos usu\u00e1rios.",
+      "employmentType": "Part-time",
+      "start": {
+        "year": 2021,
+        "month": 4,
+        "day": 0
+      },
+      "end": {
+        "year": 2023,
+        "month": 4,
+        "day": 0
+      }
+    },
+    {
+      "companyId": 11469381,
+      "companyName": "IFB - Instituto Federal de Bras\u00edlia (Oficial)",
+      "companyUsername": "ifbrasiliaoficial",
+      "companyURL": "https://www.linkedin.com/school/ifbrasiliaoficial/",
+      "companyLogo": "https://media.licdn.com/dms/image/v2/C4E0BAQFQJ_EGvN9Rmw/company-logo_400_400/company-logo_400_400/0/1657557187139/ifbrasiliaoficial_logo?e=1750896000&v=beta&t=a268Bdd97oElvnPZavVqxLYyZHhHtcDL43sUUsYgfQQ",
+      "companyIndustry": "Higher Education",
+      "companyStaffCountRange": "5001 - 10000",
+      "title": "Pesquisa acad\u00eamica",
+      "multiLocaleTitle": {
+        "pt_BR": "Pesquisa acad\u00eamica"
+      },
+      "multiLocaleCompanyName": {
+        "pt_BR": "IFB - Instituto Federal de Bras\u00edlia (Oficial)"
+      },
+      "location": "Taguatinga, Distrito Federal, Brasil",
+      "description": "- Desenvolvimento de um modelo de detec\u00e7\u00e3o de Deep Fakes utilizando Python, com as bibliotecas MediaPipe para reconhecimento de rostos e Pytorch para constru\u00e7\u00e3o e treinamento da rede neural.\n- Participa\u00e7\u00e3o em pesquisa de inicia\u00e7\u00e3o cient\u00edfica (PIBIC) com bolsa CNPq.\n- Apresenta\u00e7\u00e3o do estudo no 35o. SIBGRAPI (Conference on Graphics, Patterns and Images) com o t\u00edtulo \"A Machine Learning Approach for Deep Fake Detection\".\n- Apresenta\u00e7\u00e3o de um p\u00f4ster da pesquisa na semana de produ\u00e7\u00e3o cient\u00edfica organizada pelo IFB no evento ConectaIF 2022.",
+      "employmentType": "Contract",
+      "start": {
+        "year": 2021,
+        "month": 9,
+        "day": 0
+      },
+      "end": {
+        "year": 2022,
+        "month": 9,
+        "day": 0
+      }
+    }
+  ],
+  "fullPositions": [
+    {
+      "companyId": 10790205,
+      "companyName": "DATAPREV",
+      "companyUsername": "dataprev-tecnologia",
+      "companyURL": "https://www.linkedin.com/company/dataprev-tecnologia/",
+      "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQGWpaYlhK22cA/company-logo_400_400/company-logo_400_400/0/1649266908446/dataprev_tecnologia_logo?e=1750896000&v=beta&t=gkakPx9jxRzQSn9q75ezzLTJDVaM8zvxKXVn6sXMBYM",
+      "companyIndustry": "Information Technology & Services",
+      "companyStaffCountRange": "1001 - 5000",
+      "title": "Analista de sistema",
+      "multiLocaleTitle": {
+        "pt_BR": "Analista de sistema"
+      },
+      "multiLocaleCompanyName": {
+        "pt_BR": "DATAPREV"
+      },
+      "location": "Bras\u00edlia, Distrito Federal, Brasil",
+      "description": "- Desenvolvimento de aplica\u00e7\u00f5es web robustas com PHP, jQuery, Bootstrap e MySQL, focadas em interfaces intuitivas e responsivas.\n- Cria\u00e7\u00e3o de APIs RESTful utilizando o Slim Framework (PHP), garantindo integra\u00e7\u00e3o eficiente entre sistemas.\n- Implementa\u00e7\u00e3o de interfaces front-end modernas e din\u00e2micas, utilizando o ecossistema Nuxt.js, com foco em performance e experi\u00eancia do usu\u00e1rio.",
+      "employmentType": "Full-time",
+      "start": {
+        "year": 2024,
+        "month": 6,
+        "day": 0
+      },
+      "end": {
+        "year": 0,
+        "month": 0,
+        "day": 0
+      }
+    },
+    {
+      "companyId": 15253095,
+      "companyName": "Medware Sistemas M\u00e9dicos",
+      "companyUsername": "medware-sistemas-m\u00e9dicos",
+      "companyURL": "https://www.linkedin.com/company/medware-sistemas-m%C3%A9dicos/",
+      "companyLogo": "https://media.licdn.com/dms/image/v2/D4D0BAQGsEWQgXSoLZQ/company-logo_400_400/company-logo_400_400/0/1666181809962/medware_sistemas_mdicos_logo?e=1750896000&v=beta&t=EZrJ-iVgNa7dbOeseNVc5FkB-aq8-_VaUzCEXa8lu2o",
+      "companyIndustry": "Computer Software",
+      "companyStaffCountRange": "11 - 50",
+      "title": "Desenvolvedor full stack",
+      "multiLocaleTitle": {
+        "pt_BR": "Desenvolvedor full stack"
+      },
+      "multiLocaleCompanyName": {
+        "pt_BR": "Medware Sistemas M\u00e9dicos"
+      },
+      "location": "Bras\u00edlia, Distrito Federal, Brasil",
+      "description": "- Cria\u00e7\u00e3o de solu\u00e7\u00f5es frontend e backend voltadas para o setor m\u00e9dico, empregando a stack .NET 5 e Nuxt.\n- Desenvolvimento de aplicativos internos para televis\u00f5es, utilizando a tecnologia React Native.\n- Desenvolvimento de testes unit\u00e1rios para garantir a qualidade e robustez das solu\u00e7\u00f5es desenvolvidas.\n- Entrega consistente de solu\u00e7\u00f5es eficientes e pela promo\u00e7\u00e3o da excel\u00eancia e organiza\u00e7\u00e3o dentro da equipe.",
+      "employmentType": "Full-time",
+      "start": {
+        "year": 2023,
+        "month": 11,
+        "day": 0
+      },
+      "end": {
+        "year": 2024,
+        "month": 5,
+        "day": 0
+      }
+    },
+    {
+      "companyId": 9374535,
+      "companyName": "Xpbox Digital",
+      "companyUsername": "xpboxdigital",
+      "companyURL": "https://www.linkedin.com/company/xpboxdigital/",
+      "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQE5zfPn8XCMng/company-logo_400_400/company-logo_400_400/0/1644445586999/xpbox_logo?e=1750896000&v=beta&t=-49cp4zzXirPFsEV6jinlYAw0zOZl65r2MmXSbO9RxQ",
+      "companyIndustry": "Information Technology & Services",
+      "companyStaffCountRange": "2 - 10",
+      "title": "Desenvolvedor de front-end",
+      "multiLocaleTitle": {
+        "pt_BR": "Desenvolvedor de front-end"
+      },
+      "multiLocaleCompanyName": {
+        "pt_BR": "Xpbox Digital"
+      },
+      "location": "Bras\u00edlia, Distrito Federal, Brasil",
+      "description": "- Cria\u00e7\u00e3o de interfaces de usu\u00e1rio profissionais e interativas.\n- Utiliza\u00e7\u00e3o de tecnologias como Vue.js e Tailwind CSS para desenvolver interfaces responsivas e de alta qualidade.\n- Transforma\u00e7\u00e3o de designs em c\u00f3digo HTML, CSS e JavaScript.\n- Foco na garantia de uma experi\u00eancia de usu\u00e1rio excepcional, priorizando a otimiza\u00e7\u00e3o de desempenho e escalabilidade.\n- Colabora\u00e7\u00e3o em equipe para o sucesso dos projetos e alcance dos objetivos da empresa.",
+      "employmentType": "Full-time",
+      "start": {
+        "year": 2023,
+        "month": 4,
+        "day": 0
+      },
+      "end": {
+        "year": 2023,
+        "month": 11,
+        "day": 0
+      }
+    },
+    {
+      "companyId": 41552,
+      "companyName": "Tribunal de Contas da Uni\u00e3o",
+      "companyUsername": "tribunal-de-contas-da-uniao",
+      "companyURL": "https://www.linkedin.com/company/tribunal-de-contas-da-uniao/",
+      "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQFo-NDD3EeRsQ/company-logo_400_400/company-logo_400_400/0/1631355040623?e=1750896000&v=beta&t=pEJ8p4CjI4kwsGkAN_hts8zuM9p8jrVB7SIqYVbnH9A",
+      "companyIndustry": "Government Administration",
+      "companyStaffCountRange": "1001 - 5000",
+      "title": "Desenvolvedor de aplicativos m\u00f3veis",
+      "multiLocaleTitle": {
+        "pt_BR": "Desenvolvedor de aplicativos m\u00f3veis"
+      },
+      "multiLocaleCompanyName": {
+        "pt_BR": "Tribunal de Contas da Uni\u00e3o"
+      },
+      "location": "Bras\u00edlia, Distrito Federal, Brasil",
+      "description": "- Desenvolvimento da aplica\u00e7\u00e3o, desde a fase inicial de prototipa\u00e7\u00e3o utilizando Figma at\u00e9 a implementa\u00e7\u00e3o e programa\u00e7\u00e3o utilizando React Native, al\u00e9m da integra\u00e7\u00e3o com tecnologias como Rest, Firebase e Axios.\n- Contribui\u00e7\u00e3o ativa no desenvolvimento de novas funcionalidades, adaptando a aplica\u00e7\u00e3o \u00e0s necessidades e feedback dos usu\u00e1rios.\n- Presta\u00e7\u00e3o de suporte direto aos usu\u00e1rios, oferecendo assist\u00eancia e informa\u00e7\u00f5es sobre a aplica\u00e7\u00e3o, garantindo uma experi\u00eancia satisfat\u00f3ria aos usu\u00e1rios.",
+      "employmentType": "Part-time",
+      "start": {
+        "year": 2021,
+        "month": 4,
+        "day": 0
+      },
+      "end": {
+        "year": 2023,
+        "month": 4,
+        "day": 0
+      }
+    },
+    {
+      "companyId": 11469381,
+      "companyName": "IFB - Instituto Federal de Bras\u00edlia (Oficial)",
+      "companyUsername": "ifbrasiliaoficial",
+      "companyURL": "https://www.linkedin.com/school/ifbrasiliaoficial/",
+      "companyLogo": "https://media.licdn.com/dms/image/v2/C4E0BAQFQJ_EGvN9Rmw/company-logo_400_400/company-logo_400_400/0/1657557187139/ifbrasiliaoficial_logo?e=1750896000&v=beta&t=a268Bdd97oElvnPZavVqxLYyZHhHtcDL43sUUsYgfQQ",
+      "companyIndustry": "Higher Education",
+      "companyStaffCountRange": "5001 - 10000",
+      "title": "Pesquisa acad\u00eamica",
+      "multiLocaleTitle": {
+        "pt_BR": "Pesquisa acad\u00eamica"
+      },
+      "multiLocaleCompanyName": {
+        "pt_BR": "IFB - Instituto Federal de Bras\u00edlia (Oficial)"
+      },
+      "location": "Taguatinga, Distrito Federal, Brasil",
+      "description": "- Desenvolvimento de um modelo de detec\u00e7\u00e3o de Deep Fakes utilizando Python, com as bibliotecas MediaPipe para reconhecimento de rostos e Pytorch para constru\u00e7\u00e3o e treinamento da rede neural.\n- Participa\u00e7\u00e3o em pesquisa de inicia\u00e7\u00e3o cient\u00edfica (PIBIC) com bolsa CNPq.\n- Apresenta\u00e7\u00e3o do estudo no 35o. SIBGRAPI (Conference on Graphics, Patterns and Images) com o t\u00edtulo \"A Machine Learning Approach for Deep Fake Detection\".\n- Apresenta\u00e7\u00e3o de um p\u00f4ster da pesquisa na semana de produ\u00e7\u00e3o cient\u00edfica organizada pelo IFB no evento ConectaIF 2022.",
+      "employmentType": "Contract",
+      "start": {
+        "year": 2021,
+        "month": 9,
+        "day": 0
+      },
+      "end": {
+        "year": 2022,
+        "month": 9,
+        "day": 0
+      }
+    }
+  ],
+  "skills": [
+    {
+      "name": "Slim Framework",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "PHP",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "MySQL",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "JQuery",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "An\u00e1lise de sistemas de software",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "Ingl\u00eas",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "Vuex",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "Tailwind CSS",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": ".NET Framework",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "Capacitor",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "C#",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "Bootstrap",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "TypeScript",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "Axios",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "Desenvolvimento web",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "Rede neural convolucional (CNN)",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "Python",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "PyTorch",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "GitLab",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "Nuxt.js",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "Tailwind",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "Vue.js",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "Firebase",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "GitHub",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "Node.js",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "API REST",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "React Native",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "Desenvolvimento Android",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "JavaScript",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "React.js",
+      "passedSkillAssessment": true
+    },
+    {
+      "name": "CSS",
+      "passedSkillAssessment": true
+    },
+    {
+      "name": "HTML5",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "Git",
+      "passedSkillAssessment": false
+    },
+    {
+      "name": "Microsoft Excel",
+      "passedSkillAssessment": true
+    },
+    {
+      "name": "Microsoft Word",
+      "passedSkillAssessment": true
+    },
+    {
+      "name": "Desenvolvimento de aplicativos m\u00f3veis",
+      "passedSkillAssessment": false
+    }
+  ],
+  "certifications": [
+    {
+      "name": "PHP: criando sua aplica\u00e7\u00e3o",
+      "start": {
+        "year": 2024,
+        "month": 8,
+        "day": 0
+      },
+      "end": {
+        "year": 0,
+        "month": 0,
+        "day": 0
+      },
+      "authority": "Alura",
+      "company": {
+        "name": "Alura",
+        "universalName": "aluracursos",
+        "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQEZkMsv5FwbDA/company-logo_200_200/company-logo_200_200/0/1710187635900/aluracursos_logo?e=1750896000&v=beta&t=jpPc5-jJpc0_vE6mETJM9bvFDpD037QwgkNhnuhFM1E",
+        "staffCountRange": {},
+        "headquarter": {}
+      },
+      "timePeriod": {
+        "start": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        },
+        "end": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        }
+      }
+    },
+    {
+      "name": "Curso Vue JS 2 - O Guia Completo (incl. Vue Router & Vuex) ",
+      "start": {
+        "year": 2024,
+        "month": 3,
+        "day": 0
+      },
+      "end": {
+        "year": 0,
+        "month": 0,
+        "day": 0
+      },
+      "authority": "Udemy",
+      "company": {
+        "name": "Udemy",
+        "universalName": "udemy",
+        "logo": "https://media.licdn.com/dms/image/v2/D560BAQEf_NHzN2yVQg/company-logo_200_200/company-logo_200_200/0/1723593046388/udemy_logo?e=1750896000&v=beta&t=29rg-esnhJb9VhKFCxLxR8jehGRijsGkLPFuxMztNO0",
+        "staffCountRange": {},
+        "headquarter": {}
+      },
+      "timePeriod": {
+        "start": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        },
+        "end": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        }
+      }
+    },
+    {
+      "name": "EF SET certificate",
+      "start": {
+        "year": 2024,
+        "month": 3,
+        "day": 0
+      },
+      "end": {
+        "year": 0,
+        "month": 0,
+        "day": 0
+      },
+      "authority": "EF Standard English Test (EF SET) ",
+      "company": {
+        "name": "EF SET",
+        "universalName": "efset",
+        "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQFLraHojJVQhA/company-logo_200_200/company-logo_200_200/0/1728915497369/efset_logo?e=1750896000&v=beta&t=ssjWH_5K466zNTuYaIWm5uSVSF2UDcSKAzdluiAIwAg",
+        "staffCountRange": {},
+        "headquarter": {}
+      },
+      "timePeriod": {
+        "start": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        },
+        "end": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        }
+      }
+    },
+    {
+      "name": "Certificado de Submiss\u00e3o - 11\u00aa Semana de Produ\u00e7\u00e3o Cient\u00edfica",
+      "start": {
+        "year": 2023,
+        "month": 5,
+        "day": 0
+      },
+      "end": {
+        "year": 0,
+        "month": 0,
+        "day": 0
+      },
+      "authority": "Even3 ",
+      "company": {
+        "name": "Even3 ",
+        "universalName": "even3",
+        "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQGgow-NKJPhPw/company-logo_200_200/company-logo_200_200/0/1630569049482/even3_logo?e=1750896000&v=beta&t=fJq3B8KpcvK_B7KaM9I3vJbBjEl2LAZbVSH4iTLPDDQ",
+        "staffCountRange": {},
+        "headquarter": {}
+      },
+      "timePeriod": {
+        "start": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        },
+        "end": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        }
+      }
+    },
+    {
+      "name": "Treinando uma Rede Neural: Deep Learning com PyTorch",
+      "start": {
+        "year": 2022,
+        "month": 5,
+        "day": 0
+      },
+      "end": {
+        "year": 0,
+        "month": 0,
+        "day": 0
+      },
+      "authority": "Alura",
+      "company": {
+        "name": "Alura",
+        "universalName": "aluracursos",
+        "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQEZkMsv5FwbDA/company-logo_200_200/company-logo_200_200/0/1710187635900/aluracursos_logo?e=1750896000&v=beta&t=jpPc5-jJpc0_vE6mETJM9bvFDpD037QwgkNhnuhFM1E",
+        "staffCountRange": {},
+        "headquarter": {}
+      },
+      "timePeriod": {
+        "start": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        },
+        "end": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        }
+      }
+    },
+    {
+      "name": "Redes Neurais: Deep Learning com PyTorch",
+      "start": {
+        "year": 2022,
+        "month": 3,
+        "day": 0
+      },
+      "end": {
+        "year": 0,
+        "month": 0,
+        "day": 0
+      },
+      "authority": "Alura",
+      "company": {
+        "name": "Alura",
+        "universalName": "aluracursos",
+        "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQEZkMsv5FwbDA/company-logo_200_200/company-logo_200_200/0/1710187635900/aluracursos_logo?e=1750896000&v=beta&t=jpPc5-jJpc0_vE6mETJM9bvFDpD037QwgkNhnuhFM1E",
+        "staffCountRange": {},
+        "headquarter": {}
+      },
+      "timePeriod": {
+        "start": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        },
+        "end": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        }
+      }
+    },
+    {
+      "name": "JavaScript: programando a Orienta\u00e7\u00e3o a Objetos",
+      "start": {
+        "year": 2022,
+        "month": 2,
+        "day": 0
+      },
+      "end": {
+        "year": 0,
+        "month": 0,
+        "day": 0
+      },
+      "authority": "Alura",
+      "company": {
+        "name": "Alura",
+        "universalName": "aluracursos",
+        "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQEZkMsv5FwbDA/company-logo_200_200/company-logo_200_200/0/1710187635900/aluracursos_logo?e=1750896000&v=beta&t=jpPc5-jJpc0_vE6mETJM9bvFDpD037QwgkNhnuhFM1E",
+        "staffCountRange": {},
+        "headquarter": {}
+      },
+      "timePeriod": {
+        "start": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        },
+        "end": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        }
+      }
+    },
+    {
+      "name": "Certificado de Introdu\u00e7\u00e3o ao Git e Github DIO",
+      "start": {
+        "year": 2020,
+        "month": 11,
+        "day": 0
+      },
+      "end": {
+        "year": 0,
+        "month": 0,
+        "day": 0
+      },
+      "authority": "Digital Innovation One Inc.",
+      "company": {
+        "name": "DIO",
+        "universalName": "dio-makethechange",
+        "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQH1oKYv5J7dIg/company-logo_200_200/B4EZZENmwOHgAM-/0/1744901140516/dio_makethechange_logo?e=1750896000&v=beta&t=nQDYvi-sIcvPqHrRt_MxtXihMLj_heQGs9V09pfplIo",
+        "staffCountRange": {},
+        "headquarter": {}
+      },
+      "timePeriod": {
+        "start": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        },
+        "end": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        }
+      }
+    },
+    {
+      "name": "Certificado de HTML Avan\u00e7ado Bradesco",
+      "start": {
+        "year": 2020,
+        "month": 2,
+        "day": 0
+      },
+      "end": {
+        "year": 0,
+        "month": 0,
+        "day": 0
+      },
+      "authority": "Funda\u00e7\u00e3o Bradesco",
+      "company": {
+        "name": "Funda\u00e7\u00e3o Bradesco",
+        "universalName": "fundacaobradesco",
+        "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQFOiaQvbDY3hQ/company-logo_200_200/company-logo_200_200/0/1630591657622/fundacaobradesco_logo?e=1750896000&v=beta&t=cUW4j2_dUjOkHDjT5KGU5ncca7QyzcmgSJAIhAIBOA4",
+        "staffCountRange": {},
+        "headquarter": {}
+      },
+      "timePeriod": {
+        "start": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        },
+        "end": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        }
+      }
+    },
+    {
+      "name": "Curso de React JS",
+      "start": {
+        "year": 2023,
+        "month": 3,
+        "day": 0
+      },
+      "end": {
+        "year": 2023,
+        "month": 10,
+        "day": 0
+      },
+      "authority": "Coderhouse",
+      "company": {
+        "name": "Coderhouse",
+        "universalName": "coderhouse",
+        "logo": "https://media.licdn.com/dms/image/v2/C4D0BAQH47RGjDD7AwQ/company-logo_200_200/company-logo_200_200/0/1640272006358/coderhouse_logo?e=1750896000&v=beta&t=hG_-ZPQDtcq6dP9T2E0u2TgL1nDLRAACT0FdEiGzzxg",
+        "staffCountRange": {},
+        "headquarter": {}
+      },
+      "timePeriod": {
+        "start": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        },
+        "end": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        }
+      }
+    }
+  ],
+  "projects": {},
+  "supportedLocales": [
+    {
+      "country": "BR",
+      "language": "pt"
+    }
+  ],
+  "multiLocaleFirstName": {
+    "pt": "Gustavo"
+  },
+  "multiLocaleLastName": {
+    "pt": "Cunha Lacerda"
+  },
+  "multiLocaleHeadline": {
+    "pt": "Analista de Sistemas | Desenvolvedor de Software | Full Stack | PHP - Vue - MySQL"
+  }
+}
