@@ -1,21 +1,39 @@
-/* Variáveis de cores para o tema espacial */
+/* ============================================
+   COSMIC FOLK — Outer Wilds inspired palette
+   Warm amber, burnt orange, deep violet, ember gold
+   ============================================ */
 :root {
-  --color-space-black: #0a0a0f;
-  --color-space-dark: #121225;
-  --color-space-blue: #1a1a3a;
-  --color-space-purple: #2d1b4e;
-  --color-star: #e0e0ff;
-  --color-nebula-1: #8a2be2;
-  --color-nebula-2: #4b0082;
-  --color-accent: #00d9ff;
-  --color-text: #ffffff;
-  --color-text-secondary: #b3b3cc;
+  --color-bg:           #0d0a08;
+  --color-bg-surface:   #13100d;
+  --color-bg-card:      rgba(30, 20, 12, 0.55);
+  --color-space-dark:   #100d0a;
+
+  /* Accent — âmbar / fogueira */
+  --color-accent:       #e8a45a;
+  --color-accent-dim:   #c97d3e;
+  --color-glow:         #f0c070;
+
+  /* Nebulosas quentes */
+  --color-nebula-1:     #7b2d1e;  /* vermelho-vinho */
+  --color-nebula-2:     #3d1a5c;  /* roxo profundo */
+  --color-nebula-3:     #c45c1a;  /* laranja queimado */
+
+  /* Texto */
+  --color-text:         #f0e8d8;
+  --color-text-secondary: #a89880;
+  --color-text-muted:   #6b5c4a;
+
+  /* Tipografia */
   --font-mono: 'Space Mono', monospace;
   --font-sans: 'Work Sans', sans-serif;
+
+  /* Bordas */
+  --border-subtle:      rgba(232, 164, 90, 0.12);
+  --border-hover:       rgba(232, 164, 90, 0.35);
 }
 
-/* Reset e estilos base */
-* {
+/* Reset */
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -28,99 +46,17 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--color-space-black);
+  background-color: var(--color-bg);
   color: var(--color-text);
   overflow-x: hidden;
   line-height: 1.6;
 }
 
-/* Estilos para o tema espacial */
+/* Fundo Three.js */
 .space-bg {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   z-index: -1;
-}
-
-/* Animações fluidas */
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.6;
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Elementos fluidos */
-.fluid-shape {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(60px);
-  opacity: 0.15;
-  z-index: -1;
-}
-
-.fluid-shape-1 {
-  background: var(--color-nebula-1);
-  width: 300px;
-  height: 300px;
-  top: 10%;
-  left: 10%;
-  animation: float 15s ease-in-out infinite;
-}
-
-.fluid-shape-2 {
-  background: var(--color-nebula-2);
-  width: 400px;
-  height: 400px;
-  bottom: 10%;
-  right: 10%;
-  animation: float 20s ease-in-out infinite reverse;
-}
-
-.fluid-shape-3 {
-  background: var(--color-accent);
-  width: 200px;
-  height: 200px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: pulse 10s ease-in-out infinite;
-}
-
-/* Estrelas */
-.star {
-  position: absolute;
-  background-color: var(--color-star);
-  border-radius: 50%;
-  opacity: 0.8;
 }
 
 /* Tipografia */
@@ -132,89 +68,90 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3.5rem;
-  background: linear-gradient(to right, var(--color-text), var(--color-accent));
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  background: linear-gradient(135deg, var(--color-text) 30%, var(--color-glow) 70%, var(--color-accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.05;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   color: var(--color-accent);
 }
 
-h3 {
-  font-size: 1.75rem;
-}
+h3 { font-size: 1.5rem; }
 
 p {
   margin-bottom: 1.5rem;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 /* Layout */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
 section {
-  padding: 6rem 0;
+  padding: 7rem 0;
   position: relative;
   overflow: hidden;
 }
 
-/* Botões e links */
+/* Título de seção com ornamento */
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 3.5rem;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--color-accent);
+  margin-top: 0.6rem;
+  opacity: 0.6;
+}
+
+/* Botões */
 .btn {
   display: inline-block;
-  padding: 0.8rem 2rem;
+  padding: 0.7rem 1.6rem;
   background: transparent;
-  border: 2px solid var(--color-accent);
+  border: 1px solid var(--color-accent);
   color: var(--color-accent);
   font-family: var(--font-mono);
-  font-size: 1rem;
+  font-size: 0.82rem;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
+  letter-spacing: 2px;
+  border-radius: 3px;
+  transition: background 0.2s ease, color 0.2s ease;
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
 }
 
-.btn:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
+.btn:hover { background: rgba(232, 164, 90, 0.1); }
+
+.btn-primary {
   background: var(--color-accent);
-  transition: all 0.3s ease;
-  z-index: -1;
+  color: var(--color-bg);
 }
 
-.btn:hover {
-  color: var(--color-space-black);
-}
-
-.btn:hover:before {
-  width: 100%;
-}
+.btn-primary:hover { background: var(--color-glow); border-color: var(--color-glow); color: var(--color-bg); }
 
 a {
   color: var(--color-accent);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: color 0.2s ease;
 }
 
-a:hover {
-  opacity: 0.8;
-}
+a:hover { color: var(--color-glow); }
 
 /* Navegação */
 .nav {
@@ -224,14 +161,14 @@ a:hover {
   width: 100%;
   padding: 1.5rem 0;
   z-index: 100;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-  background-color: rgba(10, 10, 15, 0.8);
+  transition: all 0.4s ease;
 }
 
 .nav-scrolled {
   padding: 1rem 0;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  background: rgba(13, 10, 8, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .nav-container {
@@ -242,62 +179,54 @@ a:hover {
 
 .nav-logo {
   font-family: var(--font-mono);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: var(--color-text);
+  text-decoration: none;
+  letter-spacing: 3px;
 }
 
-.nav-links {
-  display: flex;
-  gap: 2rem;
-}
+.nav-links { display: flex; gap: 2.5rem; }
 
 .nav-link {
   font-family: var(--font-mono);
-  font-size: 1rem;
-  color: var(--color-text);
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
   position: relative;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-.nav-link:after {
+.nav-link::after {
   content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: -4px;
   left: 0;
   width: 0;
-  height: 2px;
-  background-color: var(--color-accent);
-  transition: all 0.3s ease;
+  height: 1px;
+  background: var(--color-accent);
+  box-shadow: 0 0 6px var(--color-accent);
+  transition: width 0.3s ease;
 }
 
-.nav-link:hover:after {
-  width: 100%;
-}
+.nav-link:hover,
+.nav-link.active { color: var(--color-accent); }
+.nav-link:hover::after,
+.nav-link.active::after { width: 100%; }
 
 /* Responsividade */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-  
-  h2 {
-    font-size: 2rem;
-  }
-  
-  section {
-    padding: 4rem 0;
-  }
-  
-  .nav-links {
-    display: none;
-  }
+  section { padding: 4.5rem 0; }
+  .container { padding: 0 1.25rem; }
 }
 
-/* Animações para elementos que aparecem na tela */
+/* Fade-in scroll */
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .fade-in.visible {
@@ -305,140 +234,63 @@ a:hover {
   transform: translateY(0);
 }
 
-/* Estilos para cards de projetos */
-.project-card {
-  background: rgba(26, 26, 58, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+/* Cards base */
+.card-base {
+  background: var(--color-bg-card);
+  border: 1px solid var(--border-subtle);
   border-radius: 8px;
-  padding: 1.5rem;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-  height: 100%;
+  backdrop-filter: blur(12px);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  border-color: var(--color-accent);
+.card-base:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 8px 40px rgba(232, 164, 90, 0.08);
 }
 
-/* Estilos para seção de habilidades */
+/* Skill tags */
 .skill-tag {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  background: rgba(0, 217, 255, 0.1);
-  border: 1px solid var(--color-accent);
-  border-radius: 20px;
+  padding: 0.35rem 0.85rem;
+  background: rgba(232, 164, 90, 0.07);
+  border: 1px solid rgba(232, 164, 90, 0.2);
+  border-radius: 3px;
   font-family: var(--font-mono);
-  font-size: 0.9rem;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
 }
 
-/* Estilos para a linha do tempo de experiência */
-.timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
+.skill-tag:hover {
+  background: rgba(232, 164, 90, 0.14);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: translateY(-2px);
 }
 
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 2px;
-  background-color: var(--color-accent);
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -1px;
-}
-
-.timeline-item {
-  padding: 10px 40px;
-  position: relative;
-  width: 50%;
-  box-sizing: border-box;
-}
-
-.timeline-item::after {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  right: -10px;
-  background-color: var(--color-space-black);
-  border: 3px solid var(--color-accent);
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.timeline-left {
-  left: 0;
-}
-
-.timeline-right {
-  left: 50%;
-}
-
-.timeline-right::after {
-  left: -10px;
-}
-
-.timeline-content {
-  padding: 20px;
-  background: rgba(26, 26, 58, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  backdrop-filter: blur(10px);
-}
-
-/* Estilos para o footer */
+/* Footer */
 .footer {
   background-color: var(--color-space-dark);
   padding: 3rem 0;
   text-align: center;
+  border-top: 1px solid var(--border-subtle);
 }
 
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.social-link {
-  font-size: 1.5rem;
-  color: var(--color-text);
-  transition: all 0.3s ease;
-}
-
-.social-link:hover {
-  color: var(--color-accent);
-  transform: translateY(-3px);
-}
-
-/* Easter eggs - Elementos matemáticos */
+/* Easter eggs */
 .math-easter-egg {
   position: absolute;
   font-family: var(--font-mono);
-  opacity: 0.1;
+  opacity: 0.08;
   pointer-events: none;
   user-select: none;
+  color: var(--color-accent);
 }
 
-/* Cubo mágico easter egg */
-.rubiks-cube {
+.rubiks-cube-container {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 40px;
-  height: 40px;
+  z-index: 100;
   cursor: pointer;
-  z-index: 10;
-  transition: all 0.3s ease;
-}
-
-.rubiks-cube:hover {
-  transform: rotate(20deg) scale(1.2);
 }

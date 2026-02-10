@@ -11,7 +11,7 @@ export default defineNuxtPlugin(() => {
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: 'Gustavo Cunha Lacerda | Portfólio' },
       { name: 'twitter:description', content: 'Portfólio de Gustavo Cunha Lacerda - Desenvolvedor Full Stack' },
-      { name: 'theme-color', content: '#0a0a0f' }
+      { name: 'theme-color', content: '#0d0a08' }
     ],
     link: [
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
