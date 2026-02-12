@@ -1,16 +1,18 @@
 <template>
-  <div class="hero-section">
+  <section class="hero-section" id="home">
     <div class="container">
       <div class="hero-content">
-        <h1 class="fade-in">Gustavo Cunha Lacerda</h1>
-        <p class="hero-subtitle fade-in">{{ profileData.headline }}</p>
+        <h1 class="fade-in">Gustavo<br>Cunha Lacerda</h1>
+        <p class="hero-subtitle fade-in">
+          <span class="typed-text">{{ displayedText }}</span><span class="cursor">|</span>
+        </p>
         <div class="hero-buttons fade-in">
-          <a href="#projects" class="btn">Ver Projetos</a>
-          <a href="#contact" class="btn">Contato</a>
+          <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+          <a href="#contact" class="btn btn-outline">Contato</a>
         </div>
       </div>
     </div>
-    <div class="scroll-indicator fade-in">
+    <a href="#about" class="scroll-indicator fade-in" aria-label="Rolar para baixo">
       <div class="mouse">
         <div class="wheel"></div>
       </div>
@@ -19,29 +21,59 @@
         <span></span>
         <span></span>
       </div>
-    </div>
-  </div>
+    </a>
+  </section>
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 
-const props = defineProps({
-  profileData: {
-    type: Object,
-    required: true
-  }
+defineProps({
+  profileData: { type: Object, required: true }
 });
+
+const roles = ['Full Stack Developer', 'Vue.js Enthusiast', 'Problem Solver', 'Open Source Contributor'];
+const displayedText = ref('');
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let timer = null;
+
+const type = () => {
+  const current = roles[roleIndex];
+  if (isDeleting) {
+    displayedText.value = current.slice(0, --charIndex);
+  } else {
+    displayedText.value = current.slice(0, ++charIndex);
+  }
+
+  let delay = isDeleting ? 60 : 100;
+
+  if (!isDeleting && charIndex === current.length) {
+    delay = 2000;
+    isDeleting = true;
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    roleIndex = (roleIndex + 1) % roles.length;
+    delay = 400;
+  }
+
+  timer = setTimeout(type, delay);
+};
+
+onMounted(() => { timer = setTimeout(type, 800); });
+onUnmounted(() => clearTimeout(timer));
 </script>
 
 <style scoped>
 .hero-section {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
   overflow: hidden;
+  padding-top: 80px;
 }
 
 .hero-content {
@@ -49,15 +81,44 @@ const props = defineProps({
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-bottom: 2rem;
   color: var(--color-text-secondary);
+  min-height: 2rem;
+  font-family: var(--font-mono);
+}
+
+.cursor {
+  color: var(--color-accent);
+  animation: blink 1s step-end infinite;
+  opacity: 0.8;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .hero-buttons {
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: var(--color-space-black);
+  border-color: var(--color-accent);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--color-accent);
+}
+
+.btn-outline:hover {
+  color: var(--color-space-black);
 }
 
 /* Indicador de rolagem */
@@ -69,102 +130,66 @@ const props = defineProps({
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-}
-
-.scroll-indicator:hover {
-  opacity: 1;
+  opacity: 0.45;
+  text-decoration: none;
 }
 
 .mouse {
-  width: 30px;
-  height: 50px;
-  border: 2px solid var(--color-accent);
+  width: 26px;
+  height: 42px;
+  border: 1px solid rgba(232, 164, 90, 0.4);
   border-radius: 20px;
   position: relative;
 }
 
 .wheel {
-  width: 4px;
-  height: 8px;
-  background-color: var(--color-accent);
+  width: 3px;
+  height: 7px;
+  background: var(--color-accent);
   position: absolute;
-  top: 10px;
+  top: 7px;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 2px;
-  animation: scroll 2s infinite;
+  animation: scroll-wheel 2s infinite;
 }
 
 .arrow {
-  margin-top: 10px;
+  margin-top: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
 }
 
 .arrow span {
   display: block;
-  width: 10px;
-  height: 10px;
-  border-bottom: 2px solid var(--color-accent);
-  border-right: 2px solid var(--color-accent);
+  width: 8px;
+  height: 8px;
+  border-bottom: 1px solid rgba(232, 164, 90, 0.5);
+  border-right: 1px solid rgba(232, 164, 90, 0.5);
   transform: rotate(45deg);
-  animation: arrow 2s infinite;
+  animation: arrow-anim 2s infinite;
   opacity: 0;
 }
 
-.arrow span:nth-child(1) {
-  animation-delay: 0s;
+.arrow span:nth-child(2) { animation-delay: 0.2s; }
+.arrow span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes scroll-wheel {
+  0% { opacity: 1; top: 8px; }
+  50% { opacity: 0; top: 28px; }
+  100% { opacity: 1; top: 8px; }
 }
 
-.arrow span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.arrow span:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-@keyframes scroll {
-  0% {
-    opacity: 1;
-    top: 10px;
-  }
-  50% {
-    opacity: 0;
-    top: 30px;
-  }
-  100% {
-    opacity: 1;
-    top: 10px;
-  }
-}
-
-@keyframes arrow {
-  0% {
-    opacity: 0;
-    transform: rotate(45deg) translate(-5px, -5px);
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: rotate(45deg) translate(5px, 5px);
-  }
+@keyframes arrow-anim {
+  0% { opacity: 0; transform: rotate(45deg) translate(-4px, -4px); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: rotate(45deg) translate(4px, 4px); }
 }
 
 @media (max-width: 768px) {
-  .hero-subtitle {
-    font-size: 1.2rem;
-  }
-  
-  .hero-buttons {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  .hero-subtitle { font-size: 1.1rem; }
+  .hero-buttons { flex-direction: column; align-items: flex-start; }
 }
 </style>
