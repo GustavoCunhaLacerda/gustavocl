@@ -1,34 +1,40 @@
 <template>
-  <div class="about-section" id="about">
+  <section class="about-section" id="about">
     <div class="container">
       <h2 class="section-title fade-in">Sobre Mim</h2>
       <div class="about-content fade-in">
         <div class="about-text">
           <p>{{ profileData.summary }}</p>
           <div class="skill-tags">
-            <span v-for="(skill, index) in skills" :key="index" class="skill-tag">{{ skill }}</span>
+            <span
+              v-for="(skill, index) in skills"
+              :key="index"
+              class="skill-tag"
+              :style="{ animationDelay: `${index * 40}ms` }">
+              {{ skill }}
+            </span>
           </div>
         </div>
         <div class="about-image">
-          <img :src="profileData.profilePicture" alt="Gustavo Cunha Lacerda" />
+          <div class="image-wrapper">
+            <img
+              v-if="profileData.profilePicture"
+              :src="profileData.profilePicture"
+              alt="Gustavo Cunha Lacerda"
+              loading="lazy" />
+            <div v-else class="image-placeholder">GCL</div>
+            <div class="image-border"></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
-
-const props = defineProps({
-  profileData: {
-    type: Object,
-    required: true
-  },
-  skills: {
-    type: Array,
-    required: true
-  }
+defineProps({
+  profileData: { type: Object, required: true },
+  skills: { type: Array, required: true }
 });
 </script>
 
@@ -46,14 +52,15 @@ const props = defineProps({
 .about-content {
   display: grid;
   grid-template-columns: 3fr 2fr;
-  gap: 3rem;
+  gap: 4rem;
   align-items: center;
 }
 
 .about-text p {
   margin-bottom: 2rem;
   font-size: 1.1rem;
-  line-height: 1.8;
+  line-height: 1.9;
+  color: var(--color-text-secondary);
 }
 
 .skill-tags {
@@ -65,36 +72,63 @@ const props = defineProps({
 
 .skill-tag {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  background: rgba(0, 217, 255, 0.1);
-  border: 1px solid var(--color-accent);
-  border-radius: 20px;
+  padding: 0.35rem 0.85rem;
+  background: rgba(232, 164, 90, 0.06);
+  border: 1px solid rgba(232, 164, 90, 0.18);
+  border-radius: 3px;
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.5px;
 }
 
-.about-image img {
+.image-wrapper {
+  position: relative;
+  display: inline-block;
   width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  border: 2px solid var(--color-accent);
-  transition: all 0.3s ease;
 }
 
-.about-image img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+.image-wrapper img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.image-border {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(232, 164, 90, 0.25);
+  border-radius: 4px;
+  transform: translate(6px, 6px);
+  z-index: 0;
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background: rgba(232, 164, 90, 0.06);
+  border: 1px solid rgba(232, 164, 90, 0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  color: var(--color-accent);
 }
 
 @media (max-width: 768px) {
   .about-content {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
-  
+
   .about-image {
     order: -1;
-    max-width: 300px;
-    margin: 0 auto 2rem;
+    max-width: 260px;
+    margin: 0 auto;
   }
 }
 </style>
