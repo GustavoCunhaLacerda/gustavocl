@@ -1,199 +1,176 @@
 <template>
-  <div class="rubiks-cube-container" @click="toggleCube">
-    <div class="rubiks-cube" ref="cubeRef">
-      <div v-for="(face, index) in faces" :key="index" 
-           :class="['cube-face', face.class]"
-           :style="{ backgroundColor: face.color }">
+  <div class="cube-wrapper" @click="handleClick" title="Clique para girar!">
+    <div class="cube-scene">
+      <div class="cube" ref="cubeRef">
+        <div v-for="face in faces" :key="face.class" :class="['cube-face', face.class]">
+          <div v-for="i in 9" :key="i" class="cubie" :style="{ background: face.colors[i - 1] }"></div>
+        </div>
       </div>
     </div>
+    <span class="cube-label">3x3</span>
+
+    <!-- Toast easter egg -->
+    <Transition name="toast">
+      <div v-if="toastVisible" class="cube-toast">🧩 Você resolveu o cubo!</div>
+    </Transition>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { gsap } from 'gsap';
 
 const cubeRef = ref(null);
 const isAnimating = ref(false);
-const rotationCount = ref(0);
+const clickCount = ref(0);
+const toastVisible = ref(false);
+let idleTween = null;
 
-// Cores do cubo mágico
+// Cores reais do cubo Rubik — cada face tem 9 cubies
 const faces = [
-  { class: 'front', color: '#ff0000' },  // Vermelho
-  { class: 'back', color: '#ff8000' },   // Laranja
-  { class: 'top', color: '#ffffff' },    // Branco
-  { class: 'bottom', color: '#ffff00' }, // Amarelo
-  { class: 'left', color: '#00ff00' },   // Verde
-  { class: 'right', color: '#0000ff' }   // Azul
+  { class: 'front',  colors: Array(9).fill('#c41e3a') },  // vermelho
+  { class: 'back',   colors: Array(9).fill('#ff5800') },  // laranja
+  { class: 'top',    colors: Array(9).fill('#f0f0f0') },  // branco
+  { class: 'bottom', colors: Array(9).fill('#ffd500') },  // amarelo
+  { class: 'left',   colors: Array(9).fill('#009b48') },  // verde
+  { class: 'right',  colors: Array(9).fill('#0046ad') },  // azul
 ];
 
-// Função para animar o cubo quando clicado
-const toggleCube = () => {
-  if (isAnimating.value) return;
-  
-  isAnimating.value = true;
-  rotationCount.value++;
-  
-  // Sequência de animação diferente baseada no número de cliques
-  const sequence = rotationCount.value % 4;
-  
-  switch(sequence) {
-    case 1:
-      // Rotação no eixo Y
-      gsap.to(cubeRef.value, {
-        rotationY: '+=90',
-        duration: 0.8,
-        ease: 'power2.inOut',
-        onComplete: () => { isAnimating.value = false; }
-      });
-      break;
-    case 2:
-      // Rotação no eixo X
-      gsap.to(cubeRef.value, {
-        rotationX: '+=90',
-        duration: 0.8,
-        ease: 'power2.inOut',
-        onComplete: () => { isAnimating.value = false; }
-      });
-      break;
-    case 3:
-      // Rotação no eixo Z
-      gsap.to(cubeRef.value, {
-        rotationZ: '+=90',
-        duration: 0.8,
-        ease: 'power2.inOut',
-        onComplete: () => { isAnimating.value = false; }
-      });
-      break;
-    case 0:
-      // Sequência especial após 4 cliques
-      gsap.timeline()
-        .to(cubeRef.value, {
-          rotationY: '+=180',
-          duration: 0.6,
-          ease: 'power2.inOut'
-        })
-        .to(cubeRef.value, {
-          rotationX: '+=180',
-          duration: 0.6,
-          ease: 'power2.inOut'
-        })
-        .to(cubeRef.value, {
-          rotationZ: '+=180',
-          duration: 0.6,
-          ease: 'power2.inOut',
-          onComplete: () => { 
-            isAnimating.value = false;
-            // Easter egg após completar a sequência
-            if (rotationCount.value % 12 === 0) {
-              showEasterEgg();
-            }
-          }
-        });
-      break;
-  }
+const startIdle = () => {
+  idleTween = gsap.to(cubeRef.value, {
+    rotationY: '+=360',
+    duration: 14,
+    ease: 'none',
+    repeat: -1,
+  });
 };
 
-// Easter egg especial após completar uma sequência completa
-const showEasterEgg = () => {
-  // Criar um elemento temporário com uma mensagem ou animação
-  const message = document.createElement('div');
-  message.textContent = "Você resolveu o cubo! 🧩";
-  message.style.position = 'fixed';
-  message.style.bottom = '70px';
-  message.style.right = '20px';
-  message.style.backgroundColor = 'rgba(0, 217, 255, 0.2)';
-  message.style.color = '#00d9ff';
-  message.style.padding = '10px 15px';
-  message.style.borderRadius = '5px';
-  message.style.fontFamily = 'var(--font-mono)';
-  message.style.zIndex = '100';
-  message.style.opacity = '0';
-  
-  document.body.appendChild(message);
-  
-  // Animar a mensagem
-  gsap.to(message, {
-    opacity: 1,
-    y: -10,
-    duration: 0.5,
+const handleClick = () => {
+  if (isAnimating.value) return;
+  isAnimating.value = true;
+  clickCount.value++;
+
+  idleTween?.pause();
+
+  const moves = [
+    { rotationY: '+=90' },
+    { rotationX: '+=90' },
+    { rotationZ: '+=90' },
+    { rotationY: '+=180', rotationX: '+=90' },
+  ];
+  const move = moves[(clickCount.value - 1) % moves.length];
+
+  gsap.to(cubeRef.value, {
+    ...move,
+    duration: 0.7,
+    ease: 'power2.inOut',
     onComplete: () => {
-      setTimeout(() => {
-        gsap.to(message, {
-          opacity: 0,
-          y: 10,
-          duration: 0.5,
-          onComplete: () => {
-            document.body.removeChild(message);
-          }
-        });
-      }, 3000);
-    }
+      isAnimating.value = false;
+      if (clickCount.value % 12 === 0) showToast();
+      else idleTween?.resume();
+    },
   });
+};
+
+const showToast = () => {
+  toastVisible.value = true;
+  setTimeout(() => {
+    toastVisible.value = false;
+    idleTween?.resume();
+  }, 3000);
 };
 
 onMounted(() => {
-  // Inicializar o cubo com uma rotação aleatória
-  gsap.set(cubeRef.value, {
-    rotationX: Math.random() * 360,
-    rotationY: Math.random() * 360
-  });
+  gsap.set(cubeRef.value, { rotationX: -20, rotationY: 30 });
+  startIdle();
 });
+
+onUnmounted(() => idleTween?.kill());
 </script>
 
 <style scoped>
-.rubiks-cube-container {
+.cube-wrapper {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  perspective: 400px;
+  bottom: 24px;
+  right: 24px;
   z-index: 100;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
 }
 
-.rubiks-cube {
+.cube-scene {
+  width: 54px;
+  height: 54px;
+  perspective: 200px;
+}
+
+.cube {
   width: 100%;
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 0.2s ease;
-}
-
-.rubiks-cube:hover {
-  transform: scale(1.2);
 }
 
 .cube-face {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  box-sizing: border-box;
+  width: 54px;
+  height: 54px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2px;
+  padding: 2px;
+  background: #111;
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.6);
 }
 
-.front {
-  transform: translateZ(20px);
+.cubie {
+  border-radius: 2px;
+  opacity: 0.92;
 }
 
-.back {
-  transform: rotateY(180deg) translateZ(20px);
+/* Posicionamento das faces — cubo de 27px de profundidade (54/2) */
+.front  { transform: translateZ(27px); }
+.back   { transform: rotateY(180deg) translateZ(27px); }
+.top    { transform: rotateX(90deg) translateZ(27px); }
+.bottom { transform: rotateX(-90deg) translateZ(27px); }
+.left   { transform: rotateY(-90deg) translateZ(27px); }
+.right  { transform: rotateY(90deg) translateZ(27px); }
+
+.cube-label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--color-text-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  transition: opacity 0.2s;
 }
 
-.top {
-  transform: rotateX(90deg) translateZ(20px);
+.cube-wrapper:hover .cube-label { opacity: 1; color: var(--color-accent); }
+
+/* Toast */
+.cube-toast {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  right: 0;
+  background: rgba(20, 14, 8, 0.95);
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  box-shadow: 0 0 20px rgba(232, 164, 90, 0.2);
 }
 
-.bottom {
-  transform: rotateX(-90deg) translateZ(20px);
-}
-
-.left {
-  transform: rotateY(-90deg) translateZ(20px);
-}
-
-.right {
-  transform: rotateY(90deg) translateZ(20px);
-}
+.toast-enter-active, .toast-leave-active { transition: all 0.35s ease; }
+.toast-enter-from { opacity: 0; transform: translateY(8px); }
+.toast-leave-to   { opacity: 0; transform: translateY(-8px); }
 </style>

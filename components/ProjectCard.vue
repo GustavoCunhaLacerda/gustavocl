@@ -1,134 +1,154 @@
 <template>
-  <div class="project-card" @mouseenter="startAnimation" @mouseleave="stopAnimation">
+  <div class="project-card">
+    <div class="card-header">
+      <!-- Ícone de pasta SVG -->
+      <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+      </svg>
+      <div class="card-links">
+        <a v-if="project.homepage" :href="project.homepage" target="_blank" rel="noopener" aria-label="Demo ao vivo">
+          <!-- Ícone de link externo -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+        </a>
+        <a :href="project.html_url" target="_blank" rel="noopener" aria-label="Ver no GitHub">
+          <!-- Ícone GitHub SVG -->
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
     <h3>{{ project.name }}</h3>
     <p>{{ project.description || 'Projeto pessoal' }}</p>
+
     <div class="project-tech">
-      <span v-if="project.language" class="tech-tag">{{ project.language }}</span>
-      <span v-for="(topic, index) in project.topics" :key="index" class="tech-tag">{{ topic }}</span>
+      <span v-if="project.language" class="tech-tag lang-tag">{{ project.language }}</span>
+      <span v-for="(topic, index) in project.topics?.slice(0, 3)" :key="index" class="tech-tag">{{ topic }}</span>
     </div>
+
     <div class="project-stats">
-      <div class="stat">
-        <span class="stat-icon">★</span>
-        <span class="stat-value">{{ project.stargazers_count }}</span>
-      </div>
-      <div class="stat">
-        <span class="stat-icon">⑂</span>
-        <span class="stat-value">{{ project.forks_count }}</span>
-      </div>
+      <span class="stat">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+        {{ project.stargazers_count }}
+      </span>
+      <span class="stat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+          <line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>
+          <path d="M18 9a9 9 0 01-9 9"/>
+        </svg>
+        {{ project.forks_count }}
+      </span>
     </div>
-    <a :href="project.html_url" target="_blank" class="project-link">Ver no GitHub</a>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { gsap } from 'gsap';
-
-const props = defineProps({
-  project: {
-    type: Object,
-    required: true
-  }
+defineProps({
+  project: { type: Object, required: true }
 });
-
-const startAnimation = (e) => {
-  gsap.to(e.currentTarget, {
-    y: -10,
-    boxShadow: '0 15px 30px rgba(0, 0, 0, 0.3)',
-    borderColor: 'var(--color-accent)',
-    duration: 0.3
-  });
-};
-
-const stopAnimation = (e) => {
-  gsap.to(e.currentTarget, {
-    y: 0,
-    boxShadow: '0 5px 15px rgba(0, 0, 0, 0.1)',
-    borderColor: 'rgba(255, 255, 255, 0.1)',
-    duration: 0.3
-  });
-};
 </script>
 
 <style scoped>
 .project-card {
-  background: rgba(26, 26, 58, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-bg-card);
+  border: 1px solid var(--border-subtle);
   border-radius: 8px;
   padding: 1.5rem;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
   height: 100%;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  gap: 0.75rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.folder-icon {
+  width: 36px;
+  height: 36px;
+  color: var(--color-accent);
+}
+
+.card-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.card-links a {
+  color: var(--color-text-muted);
+  display: flex;
+  transition: color 0.2s ease;
+}
+
+.card-links a:hover { color: var(--color-accent); }
+
+.card-links svg {
+  width: 18px;
+  height: 18px;
 }
 
 h3 {
   font-family: var(--font-mono);
-  color: var(--color-accent);
-  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--color-text);
+  margin: 0;
 }
 
 p {
   color: var(--color-text-secondary);
-  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
   flex-grow: 1;
+  margin: 0;
 }
 
 .project-tech {
-  margin: 1rem 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.4rem;
+  margin-top: auto;
 }
 
 .tech-tag {
-  font-size: 0.8rem;
-  padding: 0.2rem 0.5rem;
-  background: rgba(0, 217, 255, 0.1);
-  border-radius: 4px;
+  font-size: 0.72rem;
+  padding: 0.2rem 0.55rem;
+  background: rgba(232, 164, 90, 0.07);
+  border-radius: 3px;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  letter-spacing: 0.3px;
+}
+
+.lang-tag {
   color: var(--color-accent);
+  background: rgba(232, 164, 90, 0.12);
 }
 
 .project-stats {
   display: flex;
   gap: 1rem;
-  margin: 1rem 0;
 }
 
 .stat {
   display: flex;
   align-items: center;
   gap: 0.3rem;
-}
-
-.stat-icon {
-  color: var(--color-accent);
-}
-
-.project-link {
-  margin-top: auto;
-  align-self: flex-start;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
   font-family: var(--font-mono);
-  color: var(--color-accent);
-  text-decoration: none;
-  position: relative;
-  padding-bottom: 0.2rem;
 }
 
-.project-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: var(--color-accent);
-  transition: width 0.3s ease;
-}
-
-.project-link:hover::after {
-  width: 100%;
-}
+.stat svg { color: var(--color-accent-dim); }
 </style>
