@@ -13,7 +13,8 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Portfólio de Gustavo Cunha Lacerda - Desenvolvedor Full Stack' }
+      { name: 'description', content: 'Portfólio de Gustavo Cunha Lacerda - Desenvolvedor Full Stack' },
+        { name: 'theme-color', content: '#0d0a08' }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

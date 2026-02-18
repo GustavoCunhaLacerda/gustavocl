@@ -19,7 +19,6 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import { gsap } from 'gsap';
 
 // Componentes
 import SpaceBackground from '~/components/SpaceBackground.vue';
@@ -64,10 +63,8 @@ const loadProfileData = async () => {
   }
 };
 
-// Animar elementos quando entrarem na viewport
+// Animar elementos .fade-in quando entrarem na viewport
 const initScrollAnimation = () => {
-  const fadeElements = document.querySelectorAll('.fade-in');
-  
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -75,19 +72,13 @@ const initScrollAnimation = () => {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
-  
-  fadeElements.forEach(element => {
-    observer.observe(element);
-  });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 };
 
 onMounted(async () => {
   await loadProfileData();
-  
-  // Iniciar animações após carregar os dados
-  setTimeout(() => {
-    initScrollAnimation();
-  }, 500);
+  setTimeout(initScrollAnimation, 300);
 });
 </script>
