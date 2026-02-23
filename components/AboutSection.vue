@@ -18,11 +18,9 @@
         <div class="about-image">
           <div class="image-wrapper">
             <img
-              v-if="profileData.profilePicture"
-              :src="profileData.profilePicture"
+              src="/me.png"
               alt="Gustavo Cunha Lacerda"
               loading="lazy" />
-            <div v-else class="image-placeholder">GCL</div>
             <div class="image-border"></div>
           </div>
         </div>
@@ -90,7 +88,7 @@ defineProps({
 
 .image-wrapper img {
   width: 100%;
-  border-radius: 4px;
+  border-radius: 50%;
   display: block;
   position: relative;
   z-index: 1;
@@ -99,9 +97,8 @@ defineProps({
 .image-border {
   position: absolute;
   inset: 0;
-  border: 1px solid rgba(232, 164, 90, 0.25);
-  border-radius: 4px;
-  transform: translate(6px, 6px);
+  border: 5px solid rgba(232, 164, 90, 0.25);
+  border-radius: 50%;
   z-index: 0;
 }
 
