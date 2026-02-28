@@ -19,7 +19,6 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import { defineOgImage } from '#imports';
 
 defineOgImage({
   component: 'Portfolio.takumi',
