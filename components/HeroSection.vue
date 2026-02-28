@@ -9,6 +9,19 @@
         <div class="hero-buttons fade-in">
           <a href="#projects" class="btn btn-primary">{{ $t('hero.viewProjects') }}</a>
           <a href="#contact" class="btn btn-outline">{{ $t('hero.contact') }}</a>
+          <button
+            class="btn btn-accent"
+            :disabled="isGenerating"
+            :aria-label="$t('hero.downloadCV')"
+            @click="generateResume"
+          >
+            <svg v-if="!isGenerating" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-spinner animate-spin"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 10 10"/></svg>
+            {{ isGenerating ? $t('hero.generating') : $t('hero.downloadCV') }}
+          </button>
+          <span v-if="showError" class="download-error-toast" role="alert">
+            {{ error }}
+          </span>
         </div>
       </div>
     </div>
@@ -34,6 +47,24 @@ defineProps({
 });
 
 const { t, locale } = useI18n();
+
+// Resume download
+const { isGenerating, error, generateResume } = useResumeGenerator();
+const showError = ref(false);
+let errorTimer = null;
+
+watch(error, (val) => {
+  if (errorTimer) clearTimeout(errorTimer);
+  if (val) {
+    showError.value = true;
+    errorTimer = setTimeout(() => {
+      showError.value = false;
+      error.value = null;
+    }, 3000);
+  } else {
+    showError.value = false;
+  }
+});
 
 const roles = computed(() => {
   // Use t() with indexed keys — more reliable than tm() across vue-i18n versions
@@ -221,5 +252,62 @@ onUnmounted(() => clearTimeout(timer));
 @media (max-width: 768px) {
   .hero-subtitle { font-size: 1.1rem; }
   .hero-buttons { flex-direction: column; align-items: flex-start; }
+}
+
+.btn-accent {
+  background: transparent;
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-accent:hover {
+  background: rgba(232, 164, 90, 0.1);
+}
+
+.btn-accent:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.icon-download,
+.icon-spinner {
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.hero-buttons {
+  position: relative;
+}
+
+.download-error-toast {
+  position: absolute;
+  bottom: -2.2rem;
+  left: 0;
+  background: #dc2626;
+  color: #fff;
+  font-size: 0.78rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  animation: fade-in-out 3s ease forwards;
+  pointer-events: none;
+}
+
+@keyframes fade-in-out {
+  0% { opacity: 0; transform: translateY(-4px); }
+  10% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
 }
 </style>

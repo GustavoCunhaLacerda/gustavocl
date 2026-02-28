@@ -9,6 +9,8 @@
   "hero": {
     "viewProjects": "Ver Projetos",
     "contact": "Contato",
+    "downloadCV": "Baixar Currículo",
+    "generating": "Gerando...",
     "roles": ["Full Stack Developer", "Vue.js Enthusiast", "Problem Solver", "Open Source Contributor"]
   },
   "about": {
@@ -53,6 +55,18 @@
   "seo": {
     "title": "Gustavo Cunha Lacerda | Portfólio",
     "description": "Portfólio de Gustavo Cunha Lacerda - Desenvolvedor Full Stack"
+  },
+  "resume": {
+    "sections": {
+      "summary": "Resumo Profissional",
+      "experience": "Experiência Profissional",
+      "skills": "Habilidades Técnicas",
+      "education": "Educação",
+      "certifications": "Certificações",
+      "projects": "Projetos em Destaque"
+    },
+    "present": "Presente",
+    "error": "Erro ao gerar currículo. Tente novamente."
   },
   "data": {
     "summary": "Sou desenvolvedor full stack com experiência em aplicações web e mobile de larga escala — de plataformas clínicas usadas por milhares de médicos a sistemas internos de órgãos públicos. Gosto de transformar problemas complexos em soluções simples, com código limpo e foco no usuário final. Também tenho passagem por pesquisa acadêmica em machine learning, com publicação em conferência internacional.",

@@ -9,6 +9,8 @@
   "hero": {
     "viewProjects": "View Projects",
     "contact": "Contact",
+    "downloadCV": "Download CV",
+    "generating": "Generating...",
     "roles": ["Full Stack Developer", "Vue.js Enthusiast", "Problem Solver", "Open Source Contributor"]
   },
   "about": {
@@ -53,6 +55,18 @@
   "seo": {
     "title": "Gustavo Cunha Lacerda | Portfolio",
     "description": "Portfolio of Gustavo Cunha Lacerda - Full Stack Developer"
+  },
+  "resume": {
+    "sections": {
+      "summary": "Professional Summary",
+      "experience": "Professional Experience",
+      "skills": "Technical Skills",
+      "education": "Education",
+      "certifications": "Certifications",
+      "projects": "Featured Projects"
+    },
+    "present": "Present",
+    "error": "Error generating CV. Please try again."
   },
   "data": {
     "summary": "I'm a full stack developer with experience building large-scale web and mobile applications — from clinical platforms used by thousands of doctors to internal systems for government agencies. I enjoy turning complex problems into simple solutions, with clean code and a focus on the end user. I also have a background in machine learning research, with a publication at an international conference.",
