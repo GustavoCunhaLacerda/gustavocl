@@ -111,7 +111,7 @@ import { ref, computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useLocaleData } from '../composables/useLocaleData';
 
-const { t, tm } = useI18n();
+const { t, locale } = useI18n();
 const { getPositionTitle, getPositionDescription } = useLocaleData();
 
 const props = defineProps({
@@ -145,8 +145,7 @@ const positionDescription = computed(() => {
 const formatDate = (dateObj) => {
   if (!dateObj?.year) return '';
   if (!dateObj.month) return `${dateObj.year}`;
-  const months = tm('experience.months');
-  return `${months[dateObj.month - 1]} ${dateObj.year}`;
+  return `${t(`experience.months[${dateObj.month - 1}]`)} ${dateObj.year}`;
 };
 
 const duration = computed(() => {
