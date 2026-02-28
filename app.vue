@@ -20,7 +20,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
-defineOgImage('Portfolio.takumi', {
+defineOgImage({
   title: 'Gustavo Cunha Lacerda',
   description: 'Desenvolvedor Full Stack | Vue · Nuxt · React · .NET · PHP',
   stack: 'Nuxt · Vue 3 · Three.js · GSAP · Tailwind CSS · TypeScript'
