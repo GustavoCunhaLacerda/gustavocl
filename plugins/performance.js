@@ -3,36 +3,6 @@ import { defineNuxtPlugin } from '#app';
 
 export default defineNuxtPlugin((nuxtApp) => {
   if (process.client) {
-    // Função para carregar recursos não críticos após o carregamento da página
-    const lazyLoadResources = () => {
-      // Carregar scripts de terceiros ou recursos adicionais aqui
-      // Exemplo: Analytics, fontes adicionais, etc.
-      
-      // Pré-carregar páginas que o usuário provavelmente visitará
-      const prefetchLinks = [
-        '/about',
-        '/projects',
-        '/experience',
-        '/contact'
-      ];
-      
-      prefetchLinks.forEach(href => {
-        const link = document.createElement('link');
-        link.rel = 'prefetch';
-        link.href = href;
-        document.head.appendChild(link);
-      });
-    };
-
-    // Executar após o carregamento da página
-    if (document.readyState === 'complete') {
-      setTimeout(lazyLoadResources, 1000);
-    } else {
-      window.addEventListener('load', () => {
-        setTimeout(lazyLoadResources, 1000);
-      });
-    }
-    
     // Implementar carregamento lazy de imagens
     nuxtApp.hook('page:finish', () => {
       const lazyImages = document.querySelectorAll('img[loading="lazy"]');

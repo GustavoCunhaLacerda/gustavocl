@@ -1,0 +1,96 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "experience": "Experiência",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "hero": {
+    "viewProjects": "Ver Projetos",
+    "contact": "Contato",
+    "roles": ["Full Stack Developer", "Vue.js Enthusiast", "Problem Solver", "Open Source Contributor"]
+  },
+  "about": {
+    "title": "Sobre Mim"
+  },
+  "experience": {
+    "title": "Experiência",
+    "subtitle": "{years}+ anos construindo soluções digitais",
+    "present": "Presente",
+    "expandMore": "Ver mais",
+    "expandLess": "Ver menos",
+    "months": ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
+    "duration": {
+      "year": "ano",
+      "years": "anos",
+      "month": "mês",
+      "months": "meses",
+      "and": "e"
+    },
+    "employmentType": {
+      "Full-time": "Tempo integral",
+      "Part-time": "Meio período",
+      "Contract": "Contrato",
+      "Internship": "Estágio",
+      "Freelance": "Freelance"
+    }
+  },
+  "projects": {
+    "title": "Projetos",
+    "featured": "Destaques",
+    "openSource": "Open Source",
+    "research": "Pesquisa"
+  },
+  "contact": {
+    "title": "Vamos conversar?",
+    "text": "Estou aberto a novas oportunidades e colaborações. Se quiser trocar uma ideia sobre um projeto ou apenas bater um papo sobre tecnologia, me manda uma mensagem.",
+    "sendEmail": "Enviar e-mail"
+  },
+  "footer": {
+    "easterEggHint": "Dica: Digite \"math\" para revelar easter eggs matemáticos e procure pelo cubo mágico!"
+  },
+  "seo": {
+    "title": "Gustavo Cunha Lacerda | Portfólio",
+    "description": "Portfólio de Gustavo Cunha Lacerda - Desenvolvedor Full Stack"
+  },
+  "data": {
+    "summary": "Sou desenvolvedor full stack com experiência em aplicações web e mobile de larga escala — de plataformas clínicas usadas por milhares de médicos a sistemas internos de órgãos públicos. Gosto de transformar problemas complexos em soluções simples, com código limpo e foco no usuário final. Também tenho passagem por pesquisa acadêmica em machine learning, com publicação em conferência internacional.",
+    "positions": {
+      "dataprev": {
+        "title": "Analista de sistema",
+        "description": "- Desenvolvimento solo da Plataforma de Gestão Técnica, sistema interno que padroniza e automatiza processos de fiscalização de contratos (emissão de RGTs, memorandos, TRs e TAs), utilizado por ~3.500 colaboradores da DATAPREV.\n- Migração completa de sistema legado MVC em PHP para arquitetura moderna com frontend Nuxt.js e backend com APIs RESTful (Slim Framework), adicionando validação de dados, reatividade, navegação otimizada, preenchimentos automáticos e notificações por e-mail.\n- Criação de dashboard de custos e consumo da nuvem soberana brasileira, com indicadores e relatórios gerenciais para controle de licitações.\n- Implementação de testes unitários e de integração, elevando a confiabilidade do sistema que antes era apenas uma visualização direta do banco de dados.\n- Gestão de 4 estagiárias nas atividades de suporte, gerenciamento de acessos e normalização de dados."
+      },
+      "medware": {
+        "title": "Desenvolvedor full stack",
+        "description": "- Desenvolvimento full stack em plataforma de gestão clínica utilizada por mais de 6.800 clínicas e 20.000 médicos em todo o Brasil, com .NET 5 e Nuxt.\n- Criação de aplicativos React Native para TVs de consultórios (painel de chamada de pacientes) e painéis digitais de propaganda e informações institucionais.\n- Entrega completa (frontend e backend) do projeto Calculadoras Medware, ferramenta de cálculos médicos (risco coronário, IMC, entre outros).\n- Implementação de testes unitários no backend de relatórios e dashboards, atingindo 100% de cobertura e reduzindo drasticamente bugs em produção."
+      },
+      "xpbox": {
+        "title": "Desenvolvedor de front-end",
+        "description": "- Desenvolvimento frontend na plataforma SaaS MoneySuite (gestão financeira), convertendo protótipos em interfaces Vue.js + Tailwind CSS com foco em performance e usabilidade.\n- Atuação no projeto TraderChamps, plataforma de competição de trade, implementando gráficos em tempo real com WebSocket.\n- Colaboração direta com equipe de design e desenvolvedores backend, traduzindo protótipos Figma em código responsivo e acessível.\n- Foco em otimização de desempenho e escalabilidade das interfaces entregues."
+      },
+      "tcu": {
+        "title": "Desenvolvedor de aplicativos móveis",
+        "description": "- Desenvolvimento de aplicativo mobile em React Native para controle e validação de manutenções prediais, utilizado por servidores fiscais técnicos do TCU.\n- Condução do ciclo completo: prototipação em Figma, desenvolvimento, integração com APIs REST, Firebase e Axios, até a publicação nas lojas (Play Store e App Store).\n- Tradução da aplicação web existente para mobile, adaptando layouts e aproveitando componentes nativos para melhor experiência do usuário.\n- Desenvolvimento iterativo com base no feedback direto dos usuários, evoluindo funcionalidades e prestando suporte contínuo."
+      },
+      "ifb": {
+        "title": "Pesquisa acadêmica",
+        "description": "- Desenvolvimento de modelo de detecção de Deep Fakes com Python, MediaPipe e PyTorch, alcançando 93% de acurácia em dataset de ~5.600 vídeos (~100 frames extraídos por vídeo).\n- Pesquisa de iniciação científica (PIBIC) com bolsa CNPq, resultando em publicação no 35º SIBGRAPI com o título \"A Machine Learning Approach for Deep Fake Detection\".\n- Apresentação de pôster no ConectaIF 2022, semana de produção científica do IFB.\n- Código-fonte e artigo disponíveis publicamente no GitHub e LinkedIn."
+      }
+    },
+    "featuredProjects": {
+      "calculadoras-medware": {
+        "description": "Ferramenta de cálculos médicos (risco coronário, IMC, entre outros) desenvolvida do zero, frontend e backend. Utilizada por profissionais de saúde em mais de 6.800 clínicas."
+      },
+      "moneysuite": {
+        "description": "Plataforma SaaS de gestão financeira pessoal. Desenvolvimento frontend com foco em dashboards interativos, gráficos e experiência do usuário."
+      },
+      "simp-tcu": {
+        "description": "Aplicativo mobile para controle e validação de manutenções prediais do Tribunal de Contas da União. Publicado na Play Store e App Store."
+      },
+      "deep-fake-detection": {
+        "description": "Modelo de machine learning para detecção de Deep Fakes com 93% de acurácia, treinado em ~5.600 vídeos. Publicado no 35º SIBGRAPI."
+      }
+    }
+  }
+}

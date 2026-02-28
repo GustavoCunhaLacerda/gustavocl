@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Calculadoras Medware",
+    "description": "Ferramenta de cálculos médicos (risco coronário, IMC, entre outros) desenvolvida do zero, frontend e backend. Utilizada por profissionais de saúde em mais de 6.800 clínicas.",
+    "url": "https://calculadoras.laudosux.com.br/",
+    "company": "Medware",
+    "techs": [".NET 5", "Nuxt", "CSS"],
+    "type": "professional"
+  },
+  {
+    "name": "MoneySuite",
+    "description": "Plataforma SaaS de gestão financeira pessoal. Desenvolvimento frontend com foco em dashboards interativos, gráficos e experiência do usuário.",
+    "url": "https://app.moneysuite.com.br/",
+    "company": "Xpbox Digital",
+    "techs": ["Vue.js", "Tailwind CSS", "WebSocket"],
+    "type": "professional"
+  },
+  {
+    "name": "SIMP — TCU",
+    "description": "Aplicativo mobile para controle e validação de manutenções prediais do Tribunal de Contas da União. Publicado na Play Store e App Store.",
+    "url": "https://simp.tcu.gov.br/ui/#login",
+    "company": "TCU",
+    "techs": ["React Native", "Firebase", "REST", "Figma"],
+    "type": "professional"
+  },
+  {
+    "name": "Deep Fake Detection",
+    "description": "Modelo de machine learning para detecção de Deep Fakes com 93% de acurácia, treinado em ~5.600 vídeos. Publicado no 35º SIBGRAPI.",
+    "url": "https://arxiv.org/pdf/2209.13792",
+    "github": "https://github.com/GustavoCunhaLacerda",
+    "company": "IFB",
+    "techs": ["Python", "PyTorch", "MediaPipe", "CNN"],
+    "type": "research"
+  }
+]

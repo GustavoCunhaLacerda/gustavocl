@@ -6,8 +6,8 @@ import sharp from 'sharp';
 
 // Configuração de diretórios
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const imagesDir = path.join(__dirname, 'assets/images');
-const optimizedDir = path.join(__dirname, 'public/images');
+const imagesDir = path.join(__dirname, '..', 'public');
+const optimizedDir = path.join(__dirname, '..', 'public/optimized');
 
 // Criar diretório de saída se não existir
 if (!fs.existsSync(optimizedDir)) {

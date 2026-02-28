@@ -159,7 +159,7 @@ onUnmounted(() => idleTween?.kill());
   position: absolute;
   bottom: calc(100% + 10px);
   right: 0;
-  background: rgba(20, 14, 8, 0.95);
+  background: var(--color-bg-surface);
   border: 1px solid var(--color-accent);
   color: var(--color-accent);
   font-family: var(--font-mono);

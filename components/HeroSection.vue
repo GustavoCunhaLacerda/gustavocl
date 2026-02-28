@@ -7,8 +7,8 @@
           <span class="typed-text">{{ displayedText }}</span><span class="cursor">|</span>
         </p>
         <div class="hero-buttons fade-in">
-          <a href="#projects" class="btn btn-primary">Ver Projetos</a>
-          <a href="#contact" class="btn btn-outline">Contato</a>
+          <a href="#projects" class="btn btn-primary">{{ $t('hero.viewProjects') }}</a>
+          <a href="#contact" class="btn btn-outline">{{ $t('hero.contact') }}</a>
         </div>
       </div>
     </div>
@@ -26,13 +26,29 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, computed, watch, onMounted, onUnmounted } from 'vue';
+import { useI18n } from 'vue-i18n';
 
 defineProps({
   profileData: { type: Object, required: true }
 });
 
-const roles = ['Full Stack Developer', 'Vue.js Enthusiast', 'Problem Solver', 'Open Source Contributor'];
+const { t, locale } = useI18n();
+
+const roles = computed(() => {
+  // Use t() with indexed keys — more reliable than tm() across vue-i18n versions
+  const result = [];
+  for (let i = 0; i < 10; i++) {
+    const val = t(`hero.roles[${i}]`);
+    // t() returns the key path itself when the key doesn't exist
+    if (val === `hero.roles[${i}]`) break;
+    result.push(val);
+  }
+  return result.length > 0
+    ? result
+    : ['Full Stack Developer', 'Vue.js Enthusiast', 'Problem Solver', 'Open Source Contributor'];
+});
+
 const displayedText = ref('');
 let roleIndex = 0;
 let charIndex = 0;
@@ -40,7 +56,11 @@ let isDeleting = false;
 let timer = null;
 
 const type = () => {
-  const current = roles[roleIndex];
+  const currentRoles = roles.value;
+  if (currentRoles.length === 0) return;
+  if (roleIndex >= currentRoles.length) roleIndex = 0;
+
+  const current = currentRoles[roleIndex];
   if (isDeleting) {
     displayedText.value = current.slice(0, --charIndex);
   } else {
@@ -54,12 +74,22 @@ const type = () => {
     isDeleting = true;
   } else if (isDeleting && charIndex === 0) {
     isDeleting = false;
-    roleIndex = (roleIndex + 1) % roles.length;
+    roleIndex = (roleIndex + 1) % currentRoles.length;
     delay = 400;
   }
 
   timer = setTimeout(type, delay);
 };
+
+// Reset typing effect when locale changes
+watch(locale, () => {
+  clearTimeout(timer);
+  roleIndex = 0;
+  charIndex = 0;
+  isDeleting = false;
+  displayedText.value = '';
+  timer = setTimeout(type, 400);
+});
 
 onMounted(() => { timer = setTimeout(type, 800); });
 onUnmounted(() => clearTimeout(timer));

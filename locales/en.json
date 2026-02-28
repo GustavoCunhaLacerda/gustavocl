@@ -1,0 +1,96 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "viewProjects": "View Projects",
+    "contact": "Contact",
+    "roles": ["Full Stack Developer", "Vue.js Enthusiast", "Problem Solver", "Open Source Contributor"]
+  },
+  "about": {
+    "title": "About Me"
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "{years}+ years building digital solutions",
+    "present": "Present",
+    "expandMore": "Show more",
+    "expandLess": "Show less",
+    "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    "duration": {
+      "year": "year",
+      "years": "years",
+      "month": "month",
+      "months": "months",
+      "and": "and"
+    },
+    "employmentType": {
+      "Full-time": "Full-time",
+      "Part-time": "Part-time",
+      "Contract": "Contract",
+      "Internship": "Internship",
+      "Freelance": "Freelance"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "featured": "Featured",
+    "openSource": "Open Source",
+    "research": "Research"
+  },
+  "contact": {
+    "title": "Let's talk?",
+    "text": "I'm open to new opportunities and collaborations. If you'd like to discuss a project or just chat about technology, send me a message.",
+    "sendEmail": "Send email"
+  },
+  "footer": {
+    "easterEggHint": "Hint: Type \"math\" to reveal mathematical easter eggs and look for the Rubik's cube!"
+  },
+  "seo": {
+    "title": "Gustavo Cunha Lacerda | Portfolio",
+    "description": "Portfolio of Gustavo Cunha Lacerda - Full Stack Developer"
+  },
+  "data": {
+    "summary": "I'm a full stack developer with experience building large-scale web and mobile applications — from clinical platforms used by thousands of doctors to internal systems for government agencies. I enjoy turning complex problems into simple solutions, with clean code and a focus on the end user. I also have a background in machine learning research, with a publication at an international conference.",
+    "positions": {
+      "dataprev": {
+        "title": "Systems Analyst",
+        "description": "- Solo development of the Technical Management Platform, an internal system that standardizes and automates contract oversight processes (issuance of RGTs, memos, TRs, and TAs), used by ~3,500 DATAPREV employees.\n- Complete migration of a legacy MVC system in PHP to a modern architecture with a Nuxt.js frontend and RESTful API backend (Slim Framework), adding data validation, reactivity, optimized navigation, auto-fill features, and email notifications.\n- Creation of a cost and consumption dashboard for the Brazilian sovereign cloud, with indicators and management reports for procurement control.\n- Implementation of unit and integration tests, increasing the reliability of a system that was previously just a direct database view.\n- Management of 4 interns in support activities, access management, and data normalization."
+      },
+      "medware": {
+        "title": "Full Stack Developer",
+        "description": "- Full stack development on a clinical management platform used by over 6,800 clinics and 20,000 doctors across Brazil, with .NET 5 and Nuxt.\n- Creation of React Native apps for clinic TVs (patient call panel) and digital signage for advertising and institutional information.\n- Complete delivery (frontend and backend) of the Calculadoras Medware project, a medical calculation tool (coronary risk, BMI, among others).\n- Implementation of unit tests on the reporting and dashboard backend, achieving 100% coverage and drastically reducing production bugs."
+      },
+      "xpbox": {
+        "title": "Front-end Developer",
+        "description": "- Frontend development on the MoneySuite SaaS platform (financial management), converting prototypes into Vue.js + Tailwind CSS interfaces with a focus on performance and usability.\n- Work on the TraderChamps project, a trading competition platform, implementing real-time charts with WebSocket.\n- Direct collaboration with the design team and backend developers, translating Figma prototypes into responsive and accessible code.\n- Focus on performance optimization and scalability of delivered interfaces."
+      },
+      "tcu": {
+        "title": "Mobile Application Developer",
+        "description": "- Development of a React Native mobile app for building maintenance control and validation, used by technical audit staff at TCU.\n- Led the complete cycle: Figma prototyping, development, integration with REST APIs, Firebase, and Axios, through to publishing on the stores (Play Store and App Store).\n- Translation of the existing web application to mobile, adapting layouts and leveraging native components for a better user experience.\n- Iterative development based on direct user feedback, evolving features and providing ongoing support."
+      },
+      "ifb": {
+        "title": "Academic Research",
+        "description": "- Development of a Deep Fake detection model with Python, MediaPipe, and PyTorch, achieving 93% accuracy on a dataset of ~5,600 videos (~100 frames extracted per video).\n- Undergraduate research (PIBIC) with a CNPq scholarship, resulting in a publication at the 35th SIBGRAPI titled \"A Machine Learning Approach for Deep Fake Detection\".\n- Poster presentation at ConectaIF 2022, IFB's scientific production week.\n- Source code and paper publicly available on GitHub and LinkedIn."
+      }
+    },
+    "featuredProjects": {
+      "calculadoras-medware": {
+        "description": "Medical calculation tool (coronary risk, BMI, among others) built from scratch, frontend and backend. Used by healthcare professionals in over 6,800 clinics."
+      },
+      "moneysuite": {
+        "description": "Personal finance management SaaS platform. Frontend development focused on interactive dashboards, charts, and user experience."
+      },
+      "simp-tcu": {
+        "description": "Mobile app for building maintenance control and validation at the Federal Court of Accounts (TCU). Published on the Play Store and App Store."
+      },
+      "deep-fake-detection": {
+        "description": "Machine learning model for Deep Fake detection with 93% accuracy, trained on ~5,600 videos. Published at the 35th SIBGRAPI."
+      }
+    }
+  }
+}

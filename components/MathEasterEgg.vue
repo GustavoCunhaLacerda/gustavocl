@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 
 // Fórmulas matemáticas para easter eggs
 const mathFormulas = ref([
@@ -46,20 +46,26 @@ const getRandomPosition = () => {
   };
 };
 
-onMounted(() => {
-  // Adicionar evento de teclado para revelar todas as fórmulas com uma combinação secreta
-  let keySequence = '';
-  const secretCode = 'math';
+// Adicionar evento de teclado para revelar todas as fórmulas com uma combinação secreta
+let keySequence = '';
+const secretCode = 'math';
+
+const handleKeydown = (e) => {
+  keySequence += e.key.toLowerCase();
+  keySequence = keySequence.slice(-4); // Manter apenas os últimos 4 caracteres
   
-  window.addEventListener('keydown', (e) => {
-    keySequence += e.key.toLowerCase();
-    keySequence = keySequence.slice(-4); // Manter apenas os últimos 4 caracteres
-    
-    if (keySequence === secretCode) {
-      mathFormulas.value.forEach(formula => {
-        formula.hidden = false;
-      });
-    }
-  });
+  if (keySequence === secretCode) {
+    mathFormulas.value.forEach(formula => {
+      formula.hidden = false;
+    });
+  }
+};
+
+onMounted(() => {
+  window.addEventListener('keydown', handleKeydown);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', handleKeydown);
 });
 </script>

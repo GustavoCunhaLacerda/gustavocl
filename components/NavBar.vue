@@ -8,8 +8,15 @@
            :href="link.href" class="nav-link"
            :class="{ active: activeSection === link.id }"
            @click="menuOpen = false">
-          {{ link.label }}
+          {{ $t(link.labelKey) }}
         </a>
+        <LanguageSelector class="nav-lang-mobile" />
+        <ThemeToggle class="nav-theme-mobile" />
+      </div>
+
+      <div class="nav-actions-desktop">
+        <ThemeToggle />
+        <LanguageSelector />
       </div>
 
       <button class="nav-toggle" :class="{ open: menuOpen }" @click="menuOpen = !menuOpen" aria-label="Menu">
@@ -29,11 +36,11 @@ const menuOpen = ref(false);
 const activeSection = ref('home');
 
 const links = [
-  { href: '#home', id: 'home', label: 'Início' },
-  { href: '#about', id: 'about', label: 'Sobre' },
-  { href: '#experience', id: 'experience', label: 'Experiência' },
-  { href: '#projects', id: 'projects', label: 'Projetos' },
-  { href: '#contact', id: 'contact', label: 'Contato' },
+  { href: '#home', id: 'home', labelKey: 'nav.home' },
+  { href: '#about', id: 'about', labelKey: 'nav.about' },
+  { href: '#experience', id: 'experience', labelKey: 'nav.experience' },
+  { href: '#projects', id: 'projects', labelKey: 'nav.projects' },
+  { href: '#contact', id: 'contact', labelKey: 'nav.contact' },
 ];
 
 const handleScroll = () => {
@@ -96,7 +103,30 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll));
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* Language selector & theme toggle visibility */
+.nav-theme-mobile,
+.nav-lang-mobile {
+  display: none;
+}
+
+.nav-actions-desktop {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-left: 1rem;
+}
+
 @media (max-width: 768px) {
+  .nav-actions-desktop {
+    display: none;
+  }
+
+  .nav-lang-mobile,
+  .nav-theme-mobile {
+    display: inline-flex;
+    margin-top: 1rem;
+  }
+
   .nav-toggle {
     display: flex;
   }
@@ -104,7 +134,8 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll));
   .nav-links {
     position: fixed;
     inset: 0;
-    background: rgba(13, 10, 8, 0.97);
+    background: var(--color-bg);
+    opacity: 0.97;
     backdrop-filter: blur(20px);
     display: flex;
     flex-direction: column;

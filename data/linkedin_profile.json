@@ -40,12 +40,12 @@
       "url": "https://media.licdn.com/dms/image/v2/D4D16AQF_dadGPX-FTg/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1706013058516?e=1750896000&v=beta&t=AiOI_MaUPw_3JlexRbp4Qm1-H9ZiXayShvOSv7l1QCE"
     }
   ],
-  "summary": "\ud83d\udc4bOl\u00e1! Sou Gustavo Lacerda, desenvolvedor de software.\n\n\ud83d\udcabO meu objetivo \u00e9 utilizar a tecnologia para gerar solu\u00e7\u00f5es s\u00f3lidas e inovadoras para as empresas no qual eu trabalho.\n\n\ud83e\uddd1\u200d\ud83d\udcbcNas empresas que trabalhei atuei como desenvolvedor mobile, desenvolvedor frontend e atualmente estou trabalhando como desenvolvedor fullstack.\n\n\ud83d\udc68\u200d\ud83d\udcbbTenho conhecimento e experi\u00eancia com: JavaScript, TypeScript, CSS, HTML, SASS, Tailwind, Bootstrap, JQuery, Vue, Nuxt, React, React Native, C#, .Net5 e Python.",
+  "summary": "👋Olá! Sou Gustavo Lacerda, desenvolvedor de software.\n\n💫O meu objetivo é utilizar a tecnologia para gerar soluções sólidas e inovadoras para as empresas no qual eu trabalho.\n\n🧑‍💼Nas empresas que trabalhei atuei como desenvolvedor mobile, desenvolvedor frontend e atualmente estou trabalhando como desenvolvedor fullstack.\n\n👨‍💻Tenho conhecimento e experiência com: JavaScript, TypeScript, CSS, HTML, SASS, Tailwind, Bootstrap, JQuery, Vue, Nuxt, React, React Native, C#, .Net5 e Python.",
   "headline": "Analista de Sistemas | Desenvolvedor de Software | Full Stack | PHP - Vue - MySQL",
   "geo": {
     "country": "Brazil",
-    "city": "Bras\u00edlia, Federal District",
-    "full": "Bras\u00edlia, Federal District, Brazil",
+    "city": "Brasília, Federal District",
+    "full": "Brasília, Federal District, Brazil",
     "countryCode": "br"
   },
   "educations": [
@@ -60,10 +60,10 @@
         "month": 7,
         "day": 0
       },
-      "fieldOfStudy": "Ci\u00eancia da Computa\u00e7\u00e3o",
-      "degree": "Bacharel Ci\u00eancias da Computa\u00e7\u00e3o",
+      "fieldOfStudy": "Ciência da Computação",
+      "degree": "Bacharel Ciências da Computação",
       "grade": "8.67",
-      "schoolName": "IFB - Instituto Federal de Bras\u00edlia (Oficial)",
+      "schoolName": "IFB - Instituto Federal de Brasília (Oficial)",
       "description": "",
       "activities": "",
       "url": "https://www.linkedin.com/school/ifbrasiliaoficial/",
@@ -92,8 +92,8 @@
       "companyId": 10790205,
       "companyName": "DATAPREV",
       "companyUsername": "dataprev-tecnologia",
-      "companyURL": "https://www.linkedin.com/company/dataprev-tecnologia/",
-      "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQGWpaYlhK22cA/company-logo_400_400/company-logo_400_400/0/1649266908446/dataprev_tecnologia_logo?e=1750896000&v=beta&t=gkakPx9jxRzQSn9q75ezzLTJDVaM8zvxKXVn6sXMBYM",
+      "companyURL": "https://www.dataprev.gov.br/",
+      "companyLogo": "https://logo.clearbit.com/dataprev.gov.br",
       "companyIndustry": "Information Technology & Services",
       "companyStaffCountRange": "1001 - 5000",
       "title": "Analista de sistema",
@@ -103,8 +103,8 @@
       "multiLocaleCompanyName": {
         "pt_BR": "DATAPREV"
       },
-      "location": "Bras\u00edlia, Distrito Federal, Brasil",
-      "description": "- Desenvolvimento de aplica\u00e7\u00f5es web robustas com PHP, jQuery, Bootstrap e MySQL, focadas em interfaces intuitivas e responsivas.\n- Cria\u00e7\u00e3o de APIs RESTful utilizando o Slim Framework (PHP), garantindo integra\u00e7\u00e3o eficiente entre sistemas.\n- Implementa\u00e7\u00e3o de interfaces front-end modernas e din\u00e2micas, utilizando o ecossistema Nuxt.js, com foco em performance e experi\u00eancia do usu\u00e1rio.",
+      "location": "Brasília, Distrito Federal, Brasil",
+      "description": "- Desenvolvimento solo da Plataforma de Gestão Técnica, sistema interno que padroniza e automatiza processos de fiscalização de contratos (emissão de RGTs, memorandos, TRs e TAs), utilizado por ~3.500 colaboradores da DATAPREV.\n- Migração completa de sistema legado MVC em PHP para arquitetura moderna com frontend Nuxt.js e backend com APIs RESTful (Slim Framework), adicionando validação de dados, reatividade, navegação otimizada, preenchimentos automáticos e notificações por e-mail.\n- Criação de dashboard de custos e consumo da nuvem soberana brasileira, com indicadores e relatórios gerenciais para controle de licitações.\n- Implementação de testes unitários e de integração, elevando a confiabilidade do sistema que antes era apenas uma visualização direta do banco de dados.\n- Gestão de 4 estagiárias nas atividades de suporte, gerenciamento de acessos e normalização de dados.",
       "employmentType": "Full-time",
       "start": {
         "year": 2024,
@@ -119,10 +119,10 @@
     },
     {
       "companyId": 15253095,
-      "companyName": "Medware Sistemas M\u00e9dicos",
-      "companyUsername": "medware-sistemas-m\u00e9dicos",
-      "companyURL": "https://www.linkedin.com/company/medware-sistemas-m%C3%A9dicos/",
-      "companyLogo": "https://media.licdn.com/dms/image/v2/D4D0BAQGsEWQgXSoLZQ/company-logo_400_400/company-logo_400_400/0/1666181809962/medware_sistemas_mdicos_logo?e=1750896000&v=beta&t=EZrJ-iVgNa7dbOeseNVc5FkB-aq8-_VaUzCEXa8lu2o",
+      "companyName": "Medware Sistemas Médicos",
+      "companyUsername": "medware-sistemas-médicos",
+      "companyURL": "https://www.medware.com.br/",
+      "companyLogo": "https://logo.clearbit.com/medware.com.br",
       "companyIndustry": "Computer Software",
       "companyStaffCountRange": "11 - 50",
       "title": "Desenvolvedor full stack",
@@ -130,10 +130,10 @@
         "pt_BR": "Desenvolvedor full stack"
       },
       "multiLocaleCompanyName": {
-        "pt_BR": "Medware Sistemas M\u00e9dicos"
+        "pt_BR": "Medware Sistemas Médicos"
       },
-      "location": "Bras\u00edlia, Distrito Federal, Brasil",
-      "description": "- Cria\u00e7\u00e3o de solu\u00e7\u00f5es frontend e backend voltadas para o setor m\u00e9dico, empregando a stack .NET 5 e Nuxt.\n- Desenvolvimento de aplicativos internos para televis\u00f5es, utilizando a tecnologia React Native.\n- Desenvolvimento de testes unit\u00e1rios para garantir a qualidade e robustez das solu\u00e7\u00f5es desenvolvidas.\n- Entrega consistente de solu\u00e7\u00f5es eficientes e pela promo\u00e7\u00e3o da excel\u00eancia e organiza\u00e7\u00e3o dentro da equipe.",
+      "location": "Brasília, Distrito Federal, Brasil",
+      "description": "- Desenvolvimento full stack em plataforma de gestão clínica utilizada por mais de 6.800 clínicas e 20.000 médicos em todo o Brasil, com .NET 5 e Nuxt.\n- Criação de aplicativos React Native para TVs de consultórios (painel de chamada de pacientes) e painéis digitais de propaganda e informações institucionais.\n- Entrega completa (frontend e backend) do projeto Calculadoras Medware, ferramenta de cálculos médicos (risco coronário, IMC, entre outros).\n- Implementação de testes unitários no backend de relatórios e dashboards, atingindo 100% de cobertura e reduzindo drasticamente bugs em produção.",
       "employmentType": "Full-time",
       "start": {
         "year": 2023,
@@ -151,7 +151,7 @@
       "companyName": "Xpbox Digital",
       "companyUsername": "xpboxdigital",
       "companyURL": "https://www.linkedin.com/company/xpboxdigital/",
-      "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQE5zfPn8XCMng/company-logo_400_400/company-logo_400_400/0/1644445586999/xpbox_logo?e=1750896000&v=beta&t=-49cp4zzXirPFsEV6jinlYAw0zOZl65r2MmXSbO9RxQ",
+      "companyLogo": "https://logo.clearbit.com/xpboxdigital.com.br",
       "companyIndustry": "Information Technology & Services",
       "companyStaffCountRange": "2 - 10",
       "title": "Desenvolvedor de front-end",
@@ -161,8 +161,8 @@
       "multiLocaleCompanyName": {
         "pt_BR": "Xpbox Digital"
       },
-      "location": "Bras\u00edlia, Distrito Federal, Brasil",
-      "description": "- Cria\u00e7\u00e3o de interfaces de usu\u00e1rio profissionais e interativas.\n- Utiliza\u00e7\u00e3o de tecnologias como Vue.js e Tailwind CSS para desenvolver interfaces responsivas e de alta qualidade.\n- Transforma\u00e7\u00e3o de designs em c\u00f3digo HTML, CSS e JavaScript.\n- Foco na garantia de uma experi\u00eancia de usu\u00e1rio excepcional, priorizando a otimiza\u00e7\u00e3o de desempenho e escalabilidade.\n- Colabora\u00e7\u00e3o em equipe para o sucesso dos projetos e alcance dos objetivos da empresa.",
+      "location": "Brasília, Distrito Federal, Brasil",
+      "description": "- Desenvolvimento frontend na plataforma SaaS MoneySuite (gestão financeira), convertendo protótipos em interfaces Vue.js + Tailwind CSS com foco em performance e usabilidade.\n- Atuação no projeto TraderChamps, plataforma de competição de trade, implementando gráficos em tempo real com WebSocket.\n- Colaboração direta com equipe de design e desenvolvedores backend, traduzindo protótipos Figma em código responsivo e acessível.\n- Foco em otimização de desempenho e escalabilidade das interfaces entregues.",
       "employmentType": "Full-time",
       "start": {
         "year": 2023,
@@ -177,21 +177,21 @@
     },
     {
       "companyId": 41552,
-      "companyName": "Tribunal de Contas da Uni\u00e3o",
+      "companyName": "Tribunal de Contas da União",
       "companyUsername": "tribunal-de-contas-da-uniao",
-      "companyURL": "https://www.linkedin.com/company/tribunal-de-contas-da-uniao/",
-      "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQFo-NDD3EeRsQ/company-logo_400_400/company-logo_400_400/0/1631355040623?e=1750896000&v=beta&t=pEJ8p4CjI4kwsGkAN_hts8zuM9p8jrVB7SIqYVbnH9A",
+      "companyURL": "https://portal.tcu.gov.br/",
+      "companyLogo": "https://logo.clearbit.com/tcu.gov.br",
       "companyIndustry": "Government Administration",
       "companyStaffCountRange": "1001 - 5000",
-      "title": "Desenvolvedor de aplicativos m\u00f3veis",
+      "title": "Desenvolvedor de aplicativos móveis",
       "multiLocaleTitle": {
-        "pt_BR": "Desenvolvedor de aplicativos m\u00f3veis"
+        "pt_BR": "Desenvolvedor de aplicativos móveis"
       },
       "multiLocaleCompanyName": {
-        "pt_BR": "Tribunal de Contas da Uni\u00e3o"
+        "pt_BR": "Tribunal de Contas da União"
       },
-      "location": "Bras\u00edlia, Distrito Federal, Brasil",
-      "description": "- Desenvolvimento da aplica\u00e7\u00e3o, desde a fase inicial de prototipa\u00e7\u00e3o utilizando Figma at\u00e9 a implementa\u00e7\u00e3o e programa\u00e7\u00e3o utilizando React Native, al\u00e9m da integra\u00e7\u00e3o com tecnologias como Rest, Firebase e Axios.\n- Contribui\u00e7\u00e3o ativa no desenvolvimento de novas funcionalidades, adaptando a aplica\u00e7\u00e3o \u00e0s necessidades e feedback dos usu\u00e1rios.\n- Presta\u00e7\u00e3o de suporte direto aos usu\u00e1rios, oferecendo assist\u00eancia e informa\u00e7\u00f5es sobre a aplica\u00e7\u00e3o, garantindo uma experi\u00eancia satisfat\u00f3ria aos usu\u00e1rios.",
+      "location": "Brasília, Distrito Federal, Brasil",
+      "description": "- Desenvolvimento de aplicativo mobile em React Native para controle e validação de manutenções prediais, utilizado por servidores fiscais técnicos do TCU.\n- Condução do ciclo completo: prototipação em Figma, desenvolvimento, integração com APIs REST, Firebase e Axios, até a publicação nas lojas (Play Store e App Store).\n- Tradução da aplicação web existente para mobile, adaptando layouts e aproveitando componentes nativos para melhor experiência do usuário.\n- Desenvolvimento iterativo com base no feedback direto dos usuários, evoluindo funcionalidades e prestando suporte contínuo.",
       "employmentType": "Part-time",
       "start": {
         "year": 2021,
@@ -206,21 +206,21 @@
     },
     {
       "companyId": 11469381,
-      "companyName": "IFB - Instituto Federal de Bras\u00edlia (Oficial)",
+      "companyName": "IFB - Instituto Federal de Brasília (Oficial)",
       "companyUsername": "ifbrasiliaoficial",
-      "companyURL": "https://www.linkedin.com/school/ifbrasiliaoficial/",
-      "companyLogo": "https://media.licdn.com/dms/image/v2/C4E0BAQFQJ_EGvN9Rmw/company-logo_400_400/company-logo_400_400/0/1657557187139/ifbrasiliaoficial_logo?e=1750896000&v=beta&t=a268Bdd97oElvnPZavVqxLYyZHhHtcDL43sUUsYgfQQ",
+      "companyURL": "https://www.ifb.edu.br/",
+      "companyLogo": "https://logo.clearbit.com/ifb.edu.br",
       "companyIndustry": "Higher Education",
       "companyStaffCountRange": "5001 - 10000",
-      "title": "Pesquisa acad\u00eamica",
+      "title": "Pesquisa acadêmica",
       "multiLocaleTitle": {
-        "pt_BR": "Pesquisa acad\u00eamica"
+        "pt_BR": "Pesquisa acadêmica"
       },
       "multiLocaleCompanyName": {
-        "pt_BR": "IFB - Instituto Federal de Bras\u00edlia (Oficial)"
+        "pt_BR": "IFB - Instituto Federal de Brasília (Oficial)"
       },
       "location": "Taguatinga, Distrito Federal, Brasil",
-      "description": "- Desenvolvimento de um modelo de detec\u00e7\u00e3o de Deep Fakes utilizando Python, com as bibliotecas MediaPipe para reconhecimento de rostos e Pytorch para constru\u00e7\u00e3o e treinamento da rede neural.\n- Participa\u00e7\u00e3o em pesquisa de inicia\u00e7\u00e3o cient\u00edfica (PIBIC) com bolsa CNPq.\n- Apresenta\u00e7\u00e3o do estudo no 35o. SIBGRAPI (Conference on Graphics, Patterns and Images) com o t\u00edtulo \"A Machine Learning Approach for Deep Fake Detection\".\n- Apresenta\u00e7\u00e3o de um p\u00f4ster da pesquisa na semana de produ\u00e7\u00e3o cient\u00edfica organizada pelo IFB no evento ConectaIF 2022.",
+      "description": "- Desenvolvimento de modelo de detecção de Deep Fakes com Python, MediaPipe e PyTorch, alcançando 93% de acurácia em dataset de ~5.600 vídeos (~100 frames extraídos por vídeo).\n- Pesquisa de iniciação científica (PIBIC) com bolsa CNPq, resultando em publicação no 35º SIBGRAPI com o título \"A Machine Learning Approach for Deep Fake Detection\".\n- Apresentação de pôster no ConectaIF 2022, semana de produção científica do IFB.\n- Código-fonte e artigo disponíveis publicamente no GitHub e LinkedIn.",
       "employmentType": "Contract",
       "start": {
         "year": 2021,
@@ -239,8 +239,8 @@
       "companyId": 10790205,
       "companyName": "DATAPREV",
       "companyUsername": "dataprev-tecnologia",
-      "companyURL": "https://www.linkedin.com/company/dataprev-tecnologia/",
-      "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQGWpaYlhK22cA/company-logo_400_400/company-logo_400_400/0/1649266908446/dataprev_tecnologia_logo?e=1750896000&v=beta&t=gkakPx9jxRzQSn9q75ezzLTJDVaM8zvxKXVn6sXMBYM",
+      "companyURL": "https://www.dataprev.gov.br/",
+      "companyLogo": "https://logo.clearbit.com/dataprev.gov.br",
       "companyIndustry": "Information Technology & Services",
       "companyStaffCountRange": "1001 - 5000",
       "title": "Analista de sistema",
@@ -250,8 +250,8 @@
       "multiLocaleCompanyName": {
         "pt_BR": "DATAPREV"
       },
-      "location": "Bras\u00edlia, Distrito Federal, Brasil",
-      "description": "- Desenvolvimento de aplica\u00e7\u00f5es web robustas com PHP, jQuery, Bootstrap e MySQL, focadas em interfaces intuitivas e responsivas.\n- Cria\u00e7\u00e3o de APIs RESTful utilizando o Slim Framework (PHP), garantindo integra\u00e7\u00e3o eficiente entre sistemas.\n- Implementa\u00e7\u00e3o de interfaces front-end modernas e din\u00e2micas, utilizando o ecossistema Nuxt.js, com foco em performance e experi\u00eancia do usu\u00e1rio.",
+      "location": "Brasília, Distrito Federal, Brasil",
+      "description": "- Desenvolvimento solo da Plataforma de Gestão Técnica, sistema interno que padroniza e automatiza processos de fiscalização de contratos (emissão de RGTs, memorandos, TRs e TAs), utilizado por ~3.500 colaboradores da DATAPREV.\n- Migração completa de sistema legado MVC em PHP para arquitetura moderna com frontend Nuxt.js e backend com APIs RESTful (Slim Framework), adicionando validação de dados, reatividade, navegação otimizada, preenchimentos automáticos e notificações por e-mail.\n- Criação de dashboard de custos e consumo da nuvem soberana brasileira, com indicadores e relatórios gerenciais para controle de licitações.\n- Implementação de testes unitários e de integração, elevando a confiabilidade do sistema que antes era apenas uma visualização direta do banco de dados.\n- Gestão de 4 estagiárias nas atividades de suporte, gerenciamento de acessos e normalização de dados.",
       "employmentType": "Full-time",
       "start": {
         "year": 2024,
@@ -266,10 +266,10 @@
     },
     {
       "companyId": 15253095,
-      "companyName": "Medware Sistemas M\u00e9dicos",
-      "companyUsername": "medware-sistemas-m\u00e9dicos",
-      "companyURL": "https://www.linkedin.com/company/medware-sistemas-m%C3%A9dicos/",
-      "companyLogo": "https://media.licdn.com/dms/image/v2/D4D0BAQGsEWQgXSoLZQ/company-logo_400_400/company-logo_400_400/0/1666181809962/medware_sistemas_mdicos_logo?e=1750896000&v=beta&t=EZrJ-iVgNa7dbOeseNVc5FkB-aq8-_VaUzCEXa8lu2o",
+      "companyName": "Medware Sistemas Médicos",
+      "companyUsername": "medware-sistemas-médicos",
+      "companyURL": "https://www.medware.com.br/",
+      "companyLogo": "https://logo.clearbit.com/medware.com.br",
       "companyIndustry": "Computer Software",
       "companyStaffCountRange": "11 - 50",
       "title": "Desenvolvedor full stack",
@@ -277,10 +277,10 @@
         "pt_BR": "Desenvolvedor full stack"
       },
       "multiLocaleCompanyName": {
-        "pt_BR": "Medware Sistemas M\u00e9dicos"
+        "pt_BR": "Medware Sistemas Médicos"
       },
-      "location": "Bras\u00edlia, Distrito Federal, Brasil",
-      "description": "- Cria\u00e7\u00e3o de solu\u00e7\u00f5es frontend e backend voltadas para o setor m\u00e9dico, empregando a stack .NET 5 e Nuxt.\n- Desenvolvimento de aplicativos internos para televis\u00f5es, utilizando a tecnologia React Native.\n- Desenvolvimento de testes unit\u00e1rios para garantir a qualidade e robustez das solu\u00e7\u00f5es desenvolvidas.\n- Entrega consistente de solu\u00e7\u00f5es eficientes e pela promo\u00e7\u00e3o da excel\u00eancia e organiza\u00e7\u00e3o dentro da equipe.",
+      "location": "Brasília, Distrito Federal, Brasil",
+      "description": "- Desenvolvimento full stack em plataforma de gestão clínica utilizada por mais de 6.800 clínicas e 20.000 médicos em todo o Brasil, com .NET 5 e Nuxt.\n- Criação de aplicativos React Native para TVs de consultórios (painel de chamada de pacientes) e painéis digitais de propaganda e informações institucionais.\n- Entrega completa (frontend e backend) do projeto Calculadoras Medware, ferramenta de cálculos médicos (risco coronário, IMC, entre outros).\n- Implementação de testes unitários no backend de relatórios e dashboards, atingindo 100% de cobertura e reduzindo drasticamente bugs em produção.",
       "employmentType": "Full-time",
       "start": {
         "year": 2023,
@@ -298,7 +298,7 @@
       "companyName": "Xpbox Digital",
       "companyUsername": "xpboxdigital",
       "companyURL": "https://www.linkedin.com/company/xpboxdigital/",
-      "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQE5zfPn8XCMng/company-logo_400_400/company-logo_400_400/0/1644445586999/xpbox_logo?e=1750896000&v=beta&t=-49cp4zzXirPFsEV6jinlYAw0zOZl65r2MmXSbO9RxQ",
+      "companyLogo": "https://logo.clearbit.com/xpboxdigital.com.br",
       "companyIndustry": "Information Technology & Services",
       "companyStaffCountRange": "2 - 10",
       "title": "Desenvolvedor de front-end",
@@ -308,8 +308,8 @@
       "multiLocaleCompanyName": {
         "pt_BR": "Xpbox Digital"
       },
-      "location": "Bras\u00edlia, Distrito Federal, Brasil",
-      "description": "- Cria\u00e7\u00e3o de interfaces de usu\u00e1rio profissionais e interativas.\n- Utiliza\u00e7\u00e3o de tecnologias como Vue.js e Tailwind CSS para desenvolver interfaces responsivas e de alta qualidade.\n- Transforma\u00e7\u00e3o de designs em c\u00f3digo HTML, CSS e JavaScript.\n- Foco na garantia de uma experi\u00eancia de usu\u00e1rio excepcional, priorizando a otimiza\u00e7\u00e3o de desempenho e escalabilidade.\n- Colabora\u00e7\u00e3o em equipe para o sucesso dos projetos e alcance dos objetivos da empresa.",
+      "location": "Brasília, Distrito Federal, Brasil",
+      "description": "- Desenvolvimento frontend na plataforma SaaS MoneySuite (gestão financeira), convertendo protótipos em interfaces Vue.js + Tailwind CSS com foco em performance e usabilidade.\n- Atuação no projeto TraderChamps, plataforma de competição de trade, implementando gráficos em tempo real com WebSocket.\n- Colaboração direta com equipe de design e desenvolvedores backend, traduzindo protótipos Figma em código responsivo e acessível.\n- Foco em otimização de desempenho e escalabilidade das interfaces entregues.",
       "employmentType": "Full-time",
       "start": {
         "year": 2023,
@@ -324,21 +324,21 @@
     },
     {
       "companyId": 41552,
-      "companyName": "Tribunal de Contas da Uni\u00e3o",
+      "companyName": "Tribunal de Contas da União",
       "companyUsername": "tribunal-de-contas-da-uniao",
-      "companyURL": "https://www.linkedin.com/company/tribunal-de-contas-da-uniao/",
-      "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQFo-NDD3EeRsQ/company-logo_400_400/company-logo_400_400/0/1631355040623?e=1750896000&v=beta&t=pEJ8p4CjI4kwsGkAN_hts8zuM9p8jrVB7SIqYVbnH9A",
+      "companyURL": "https://portal.tcu.gov.br/",
+      "companyLogo": "https://logo.clearbit.com/tcu.gov.br",
       "companyIndustry": "Government Administration",
       "companyStaffCountRange": "1001 - 5000",
-      "title": "Desenvolvedor de aplicativos m\u00f3veis",
+      "title": "Desenvolvedor de aplicativos móveis",
       "multiLocaleTitle": {
-        "pt_BR": "Desenvolvedor de aplicativos m\u00f3veis"
+        "pt_BR": "Desenvolvedor de aplicativos móveis"
       },
       "multiLocaleCompanyName": {
-        "pt_BR": "Tribunal de Contas da Uni\u00e3o"
+        "pt_BR": "Tribunal de Contas da União"
       },
-      "location": "Bras\u00edlia, Distrito Federal, Brasil",
-      "description": "- Desenvolvimento da aplica\u00e7\u00e3o, desde a fase inicial de prototipa\u00e7\u00e3o utilizando Figma at\u00e9 a implementa\u00e7\u00e3o e programa\u00e7\u00e3o utilizando React Native, al\u00e9m da integra\u00e7\u00e3o com tecnologias como Rest, Firebase e Axios.\n- Contribui\u00e7\u00e3o ativa no desenvolvimento de novas funcionalidades, adaptando a aplica\u00e7\u00e3o \u00e0s necessidades e feedback dos usu\u00e1rios.\n- Presta\u00e7\u00e3o de suporte direto aos usu\u00e1rios, oferecendo assist\u00eancia e informa\u00e7\u00f5es sobre a aplica\u00e7\u00e3o, garantindo uma experi\u00eancia satisfat\u00f3ria aos usu\u00e1rios.",
+      "location": "Brasília, Distrito Federal, Brasil",
+      "description": "- Desenvolvimento de aplicativo mobile em React Native para controle e validação de manutenções prediais, utilizado por servidores fiscais técnicos do TCU.\n- Condução do ciclo completo: prototipação em Figma, desenvolvimento, integração com APIs REST, Firebase e Axios, até a publicação nas lojas (Play Store e App Store).\n- Tradução da aplicação web existente para mobile, adaptando layouts e aproveitando componentes nativos para melhor experiência do usuário.\n- Desenvolvimento iterativo com base no feedback direto dos usuários, evoluindo funcionalidades e prestando suporte contínuo.",
       "employmentType": "Part-time",
       "start": {
         "year": 2021,
@@ -353,21 +353,21 @@
     },
     {
       "companyId": 11469381,
-      "companyName": "IFB - Instituto Federal de Bras\u00edlia (Oficial)",
+      "companyName": "IFB - Instituto Federal de Brasília (Oficial)",
       "companyUsername": "ifbrasiliaoficial",
-      "companyURL": "https://www.linkedin.com/school/ifbrasiliaoficial/",
-      "companyLogo": "https://media.licdn.com/dms/image/v2/C4E0BAQFQJ_EGvN9Rmw/company-logo_400_400/company-logo_400_400/0/1657557187139/ifbrasiliaoficial_logo?e=1750896000&v=beta&t=a268Bdd97oElvnPZavVqxLYyZHhHtcDL43sUUsYgfQQ",
+      "companyURL": "https://www.ifb.edu.br/",
+      "companyLogo": "https://logo.clearbit.com/ifb.edu.br",
       "companyIndustry": "Higher Education",
       "companyStaffCountRange": "5001 - 10000",
-      "title": "Pesquisa acad\u00eamica",
+      "title": "Pesquisa acadêmica",
       "multiLocaleTitle": {
-        "pt_BR": "Pesquisa acad\u00eamica"
+        "pt_BR": "Pesquisa acadêmica"
       },
       "multiLocaleCompanyName": {
-        "pt_BR": "IFB - Instituto Federal de Bras\u00edlia (Oficial)"
+        "pt_BR": "IFB - Instituto Federal de Brasília (Oficial)"
       },
       "location": "Taguatinga, Distrito Federal, Brasil",
-      "description": "- Desenvolvimento de um modelo de detec\u00e7\u00e3o de Deep Fakes utilizando Python, com as bibliotecas MediaPipe para reconhecimento de rostos e Pytorch para constru\u00e7\u00e3o e treinamento da rede neural.\n- Participa\u00e7\u00e3o em pesquisa de inicia\u00e7\u00e3o cient\u00edfica (PIBIC) com bolsa CNPq.\n- Apresenta\u00e7\u00e3o do estudo no 35o. SIBGRAPI (Conference on Graphics, Patterns and Images) com o t\u00edtulo \"A Machine Learning Approach for Deep Fake Detection\".\n- Apresenta\u00e7\u00e3o de um p\u00f4ster da pesquisa na semana de produ\u00e7\u00e3o cient\u00edfica organizada pelo IFB no evento ConectaIF 2022.",
+      "description": "- Desenvolvimento de modelo de detecção de Deep Fakes com Python, MediaPipe e PyTorch, alcançando 93% de acurácia em dataset de ~5.600 vídeos (~100 frames extraídos por vídeo).\n- Pesquisa de iniciação científica (PIBIC) com bolsa CNPq, resultando em publicação no 35º SIBGRAPI com o título \"A Machine Learning Approach for Deep Fake Detection\".\n- Apresentação de pôster no ConectaIF 2022, semana de produção científica do IFB.\n- Código-fonte e artigo disponíveis publicamente no GitHub e LinkedIn.",
       "employmentType": "Contract",
       "start": {
         "year": 2021,
@@ -399,11 +399,11 @@
       "passedSkillAssessment": false
     },
     {
-      "name": "An\u00e1lise de sistemas de software",
+      "name": "Análise de sistemas de software",
       "passedSkillAssessment": false
     },
     {
-      "name": "Ingl\u00eas",
+      "name": "Inglês",
       "passedSkillAssessment": false
     },
     {
@@ -523,13 +523,13 @@
       "passedSkillAssessment": true
     },
     {
-      "name": "Desenvolvimento de aplicativos m\u00f3veis",
+      "name": "Desenvolvimento de aplicativos móveis",
       "passedSkillAssessment": false
     }
   ],
   "certifications": [
     {
-      "name": "PHP: criando sua aplica\u00e7\u00e3o",
+      "name": "PHP: criando sua aplicação",
       "start": {
         "year": 2024,
         "month": 8,
@@ -628,7 +628,7 @@
       }
     },
     {
-      "name": "Certificado de Submiss\u00e3o - 11\u00aa Semana de Produ\u00e7\u00e3o Cient\u00edfica",
+      "name": "Certificado de Submissão - 11ª Semana de Produção Científica",
       "start": {
         "year": 2023,
         "month": 5,
@@ -727,7 +727,7 @@
       }
     },
     {
-      "name": "JavaScript: programando a Orienta\u00e7\u00e3o a Objetos",
+      "name": "JavaScript: programando a Orientação a Objetos",
       "start": {
         "year": 2022,
         "month": 2,
@@ -760,7 +760,7 @@
       }
     },
     {
-      "name": "Certificado de Introdu\u00e7\u00e3o ao Git e Github DIO",
+      "name": "Certificado de Introdução ao Git e Github DIO",
       "start": {
         "year": 2020,
         "month": 11,
@@ -793,7 +793,7 @@
       }
     },
     {
-      "name": "Certificado de HTML Avan\u00e7ado Bradesco",
+      "name": "Certificado de HTML Avançado Bradesco",
       "start": {
         "year": 2020,
         "month": 2,
@@ -804,9 +804,9 @@
         "month": 0,
         "day": 0
       },
-      "authority": "Funda\u00e7\u00e3o Bradesco",
+      "authority": "Fundação Bradesco",
       "company": {
-        "name": "Funda\u00e7\u00e3o Bradesco",
+        "name": "Fundação Bradesco",
         "universalName": "fundacaobradesco",
         "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQFOiaQvbDY3hQ/company-logo_200_200/company-logo_200_200/0/1630591657622/fundacaobradesco_logo?e=1750896000&v=beta&t=cUW4j2_dUjOkHDjT5KGU5ncca7QyzcmgSJAIhAIBOA4",
         "staffCountRange": {},

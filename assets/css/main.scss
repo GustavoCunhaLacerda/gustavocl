@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* ============================================
    COSMIC FOLK — Outer Wilds inspired palette
    Warm amber, burnt orange, deep violet, ember gold
@@ -30,6 +34,31 @@
   /* Bordas */
   --border-subtle:      rgba(232, 164, 90, 0.12);
   --border-hover:       rgba(232, 164, 90, 0.35);
+}
+
+/* ============================================
+   LIGHT THEME
+   ============================================ */
+[data-theme="light"] {
+  --color-bg:           #f5f0ea;
+  --color-bg-surface:   #ebe5dc;
+  --color-bg-card:      rgba(255, 255, 255, 0.7);
+  --color-space-dark:   #e8e0d5;
+
+  --color-accent:       #b5722a;
+  --color-accent-dim:   #9a5f20;
+  --color-glow:         #d4893a;
+
+  --color-nebula-1:     #e0a090;
+  --color-nebula-2:     #c4a8d8;
+  --color-nebula-3:     #e8a060;
+
+  --color-text:         #1a1410;
+  --color-text-secondary: #5c4f42;
+  --color-text-muted:   #8a7d70;
+
+  --border-subtle:      rgba(181, 114, 42, 0.15);
+  --border-hover:       rgba(181, 114, 42, 0.4);
 }
 
 /* Reset */
@@ -267,6 +296,36 @@ a:hover { color: var(--color-glow); }
   border-color: var(--color-accent);
   color: var(--color-accent);
   transform: translateY(-2px);
+}
+
+/* ============================================
+   LIGHT THEME OVERRIDES
+   ============================================ */
+[data-theme="light"] h1 {
+  background: linear-gradient(135deg, var(--color-text) 30%, var(--color-accent) 70%, var(--color-glow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="light"] .nav-scrolled {
+  background: rgba(245, 240, 234, 0.9);
+}
+
+[data-theme="light"] .btn:hover {
+  background: rgba(181, 114, 42, 0.1);
+}
+
+[data-theme="light"] .btn-primary {
+  color: #fff;
+}
+
+[data-theme="light"] .btn-primary:hover {
+  color: #fff;
+}
+
+[data-theme="light"] .skill-tag:hover {
+  background: rgba(181, 114, 42, 0.12);
 }
 
 /* Footer */

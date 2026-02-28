@@ -9,7 +9,7 @@
       <HeroSection :profileData="profileData" />
       <AboutSection :profileData="profileData" :skills="skills" />
       <ExperienceSection :profileData="profileData" />
-      <ProjectsSection :projects="featuredProjects" />
+      <ProjectsSection :featuredProjects="highlightedProjects" :githubProjects="topGithubProjects" />
       <ContactSection />
     </main>
     
@@ -35,14 +35,18 @@ import FooterSection from '~/components/FooterSection.vue';
 // Dados do perfil
 const profileData = ref({});
 const githubProjects = ref([]);
-const featuredProjects = ref([]);
+const highlightedProjects = ref([]);
+const topGithubProjects = ref([]);
 
-// Lista de habilidades
-const skills = [
-  'JavaScript', 'TypeScript', 'CSS', 'HTML', 'SASS', 'Tailwind', 
-  'Bootstrap', 'JQuery', 'Vue', 'Nuxt', 'React', 'React Native', 
-  'C#', '.Net5', 'Python', 'PHP', 'MySQL'
-];
+// Lista de habilidades (curada — só o que importa)
+const skills = ref([
+  'Vue.js', 'Nuxt', 'React', 'React Native',
+  'TypeScript', 'JavaScript', 'Node.js',
+  'C#', '.NET', 'PHP', 'Python',
+  'Tailwind CSS', 'SASS',
+  'MySQL', 'REST APIs', 'Git',
+  'PyTorch', 'Firebase'
+]);
 
 // Carregar dados do perfil
 const loadProfileData = async () => {
@@ -53,9 +57,14 @@ const loadProfileData = async () => {
     const githubData = await import('~/data/github_repos.json');
     githubProjects.value = githubData.default;
     
-    // Filtrar projetos em destaque (com mais estrelas ou mais recentes)
-    featuredProjects.value = githubProjects.value
-      .filter(project => project.description || project.stargazers_count > 0)
+    // Carregar projetos profissionais em destaque
+    const featuredData = await import('~/data/featured_projects.json');
+    highlightedProjects.value = featuredData.default;
+    
+    // Selecionar repos GitHub mais interessantes (com descrição ou estrelas)
+    const excludeNames = ['GustavoCunhaLacerda', 'gustavocl', 'area51'];
+    topGithubProjects.value = githubProjects.value
+      .filter(p => (p.description || p.stargazers_count > 0) && !excludeNames.includes(p.name))
       .sort((a, b) => b.stargazers_count - a.stargazers_count || new Date(b.updated_at) - new Date(a.updated_at))
       .slice(0, 6);
   } catch (error) {
@@ -63,22 +72,8 @@ const loadProfileData = async () => {
   }
 };
 
-// Animar elementos .fade-in quando entrarem na viewport
-const initScrollAnimation = () => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08 });
-
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-};
-
 onMounted(async () => {
+  useTheme().init();
   await loadProfileData();
-  setTimeout(initScrollAnimation, 300);
 });
 </script>

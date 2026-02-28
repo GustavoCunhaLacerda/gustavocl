@@ -10,6 +10,15 @@ const spaceCanvas = ref(null);
 let scene, camera, renderer;
 let animationFrame;
 let mouseX = 0, mouseY = 0;
+let isVisible = true;
+
+const updateSceneTheme = () => {
+  if (!scene) return;
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  const bg = isLight ? 0xf5f0ea : 0x0d0a08;
+  scene.background = new THREE.Color(bg);
+  scene.fog = new THREE.FogExp2(bg, 0.0006);
+};
 
 const createStarLayer = (count, spread, size, opacity, color) => {
   const geo = new THREE.BufferGeometry();
@@ -181,6 +190,13 @@ const initThree = () => {
 
   window.addEventListener('mousemove', onMouseMove);
   window.addEventListener('resize', onResize);
+  document.addEventListener('visibilitychange', handleVisibility);
+
+  // Watch for theme changes
+  const observer = new MutationObserver(updateSceneTheme);
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  updateSceneTheme();
+
   animate();
 };
 
@@ -189,7 +205,18 @@ const onMouseMove = (e) => {
   mouseY = (e.clientY / window.innerHeight - 0.5) * 0.2;
 };
 
+const handleVisibility = () => {
+  if (document.hidden) {
+    isVisible = false;
+    cancelAnimationFrame(animationFrame);
+  } else {
+    isVisible = true;
+    animate();
+  }
+};
+
 const animate = () => {
+  if (!isVisible) return;
   animationFrame = requestAnimationFrame(animate);
 
   // Paralaxe suave entre camadas
@@ -221,6 +248,7 @@ onMounted(initThree);
 onUnmounted(() => {
   window.removeEventListener('mousemove', onMouseMove);
   window.removeEventListener('resize', onResize);
+  document.removeEventListener('visibilitychange', handleVisibility);
   cancelAnimationFrame(animationFrame);
   renderer?.dispose();
 });

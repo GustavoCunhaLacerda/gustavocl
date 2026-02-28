@@ -1,10 +1,10 @@
 <template>
   <section class="about-section" id="about">
     <div class="container">
-      <h2 class="section-title fade-in">Sobre Mim</h2>
+      <h2 class="section-title fade-in">{{ $t('about.title') }}</h2>
       <div class="about-content fade-in">
         <div class="about-text">
-          <p>{{ profileData.summary }}</p>
+          <p>{{ summary }}</p>
           <div class="skill-tags">
             <span
               v-for="(skill, index) in skills"
@@ -34,6 +34,9 @@ defineProps({
   profileData: { type: Object, required: true },
   skills: { type: Array, required: true }
 });
+
+const { getSummary } = useLocaleData();
+const summary = computed(() => getSummary());
 </script>
 
 <style scoped>
