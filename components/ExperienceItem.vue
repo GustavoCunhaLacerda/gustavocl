@@ -19,14 +19,14 @@
       <div class="card-header">
         <div class="company-info">
           <img 
-            v-if="position.companyLogo && !logoError" 
-            :src="position.companyLogo" 
+            v-if="resolvedLogo && !logoError" 
+            :src="resolvedLogo" 
             :alt="position.companyName"
             class="company-logo"
             loading="lazy"
             @error="logoError = true"
           />
-          <div class="company-logo-fallback" v-if="!position.companyLogo || logoError">
+          <div class="company-logo-fallback" v-if="!resolvedLogo || logoError">
             {{ position.companyName?.charAt(0) }}
           </div>
           <div class="header-text">
@@ -122,6 +122,21 @@ const isExpanded = ref(false);
 const isHovered = ref(false);
 const logoError = ref(false);
 
+// Local logo imports (replace online URLs)
+import dataprevLogo from '~/assets/logo/dataprev.jpg';
+import medwareLogo from '~/assets/logo/medware.jpg';
+import xpboxLogo from '~/assets/logo/xpbox.webp';
+import tcuLogo from '~/assets/logo/tcu.jpeg';
+import ifbLogo from '~/assets/logo/ifb.png';
+
+const companyLogoMap = {
+  'DATAPREV': dataprevLogo,
+  'Medware Sistemas Médicos': medwareLogo,
+  'Xpbox Digital': xpboxLogo,
+  'Tribunal de Contas da União': tcuLogo,
+  'IFB - Instituto Federal de Brasília (Oficial)': ifbLogo
+};
+
 const companyKeyMap = {
   'DATAPREV': 'dataprev',
   'Medware Sistemas Médicos': 'medware',
@@ -129,6 +144,10 @@ const companyKeyMap = {
   'Tribunal de Contas da União': 'tcu',
   'IFB - Instituto Federal de Brasília': 'ifb'
 };
+
+const resolvedLogo = computed(() => {
+  return companyLogoMap[props.position.companyName] || props.position.companyLogo;
+});
 
 const positionKey = computed(() => companyKeyMap[props.position.companyName] || '');
 

@@ -6,7 +6,7 @@
         <p class="contact-text">
           {{ $t('contact.text') }}
         </p>
-        <a href="mailto:contato@gustavolacerda.com" class="btn btn-primary contact-cta">
+        <a href="mailto:gustavocunhalacerda@gmail.com" class="btn btn-primary contact-cta">
           {{ $t('contact.sendEmail') }}
         </a>
         <div class="social-row">
