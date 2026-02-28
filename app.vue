@@ -19,6 +19,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
+import { defineOgImage } from '#imports';
 
 defineOgImage('Portfolio.takumi', {
   title: 'Gustavo Cunha Lacerda',

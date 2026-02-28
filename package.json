@@ -14,6 +14,9 @@
   "dependencies": {
     "@nuxtjs/i18n": "^10.2.3",
     "@nuxtjs/tailwindcss": "^6.14.0",
+    "@oxc-minify/binding-win32-x64-msvc": "^0.112.0",
+    "@oxc-parser/binding-win32-x64-msvc": "^0.112.0",
+    "@oxc-transform/binding-win32-x64-msvc": "^0.112.0",
     "gsap": "^3.14.2",
     "nuxt": "^4.3.1",
     "sass": "^1.97.3",

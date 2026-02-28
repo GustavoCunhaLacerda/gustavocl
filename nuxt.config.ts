@@ -78,6 +78,6 @@ export default defineNuxtConfig({
       include: ['three', 'gsap']
     }
   },
-  ssr: false,
+  ssr: true,
   compatibilityDate: '2025-04-23'
 })
