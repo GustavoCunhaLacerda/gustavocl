@@ -21,7 +21,8 @@
 import { ref, onMounted } from 'vue';
 import { defineOgImage } from '#imports';
 
-defineOgImage('Portfolio.takumi', {
+defineOgImage({
+  component: 'Portfolio.takumi',
   title: 'Gustavo Cunha Lacerda',
   description: 'Desenvolvedor Full Stack | Vue · Nuxt · React · .NET · PHP',
   stack: 'Nuxt · Vue 3 · Three.js · GSAP · Tailwind CSS · TypeScript'
