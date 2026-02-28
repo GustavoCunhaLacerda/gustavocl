@@ -32,18 +32,12 @@ const createStarLayer = (count, spread, size, opacity, color) => {
   }
   geo.setAttribute('position', new THREE.Float32BufferAttribute(verts, 3));
   const mat = new THREE.PointsMaterial({
-    color,
-    size,
-    transparent: true,
-    opacity,
-    sizeAttenuation: true,
-    blending: THREE.AdditiveBlending,
-    depthWrite: false,
+    color, size, transparent: true, opacity,
+    sizeAttenuation: true, blending: THREE.AdditiveBlending, depthWrite: false,
   });
   return new THREE.Points(geo, mat);
 };
 
-// Nebulosa como nuvem de partículas — não esfera sólida
 const createNebulaCloud = (color, count, spread, cx, cy, cz, opacity) => {
   const geo = new THREE.BufferGeometry();
   const verts = [];
@@ -59,21 +53,16 @@ const createNebulaCloud = (color, count, spread, cx, cy, cz, opacity) => {
   }
   geo.setAttribute('position', new THREE.Float32BufferAttribute(verts, 3));
   const mat = new THREE.PointsMaterial({
-    color,
-    size: 2.5 + Math.random() * 2,
-    transparent: true,
-    opacity,
-    blending: THREE.AdditiveBlending,
-    depthWrite: false,
-    sizeAttenuation: true,
+    color, size: 2.5 + Math.random() * 2, transparent: true, opacity,
+    blending: THREE.AdditiveBlending, depthWrite: false, sizeAttenuation: true,
   });
   return new THREE.Points(geo, mat);
 };
 
 const layers = [];
-const orbitals = []; // { pivot, speed }
+const orbitals = [];
+const planetMeshes = []; // for spin
 
-// Cria trilha de órbita elíptica
 const createOrbitRing = (rx, ry, tilt = 0) => {
   const pts = [];
   for (let i = 0; i <= 128; i++) {
@@ -82,71 +71,112 @@ const createOrbitRing = (rx, ry, tilt = 0) => {
   }
   const geo = new THREE.BufferGeometry().setFromPoints(pts);
   const mat = new THREE.LineBasicMaterial({
-    color: 0xe8a45a,
-    transparent: true,
-    opacity: 0.08,
-    blending: THREE.AdditiveBlending,
-    depthWrite: false,
+    color: 0xe8a45a, transparent: true, opacity: 0.08,
+    blending: THREE.AdditiveBlending, depthWrite: false,
   });
   const ring = new THREE.Line(geo, mat);
   ring.rotation.x = tilt;
   return ring;
 };
 
-// Cria planeta com glow
-const createPlanet = (radius, color, emissive = 0x000000) => {
+// Glow sprite around a planet
+const createGlow = (radius, color, opacity = 0.15) => {
   const geo = new THREE.SphereGeometry(radius, 24, 24);
-  const mat = new THREE.MeshStandardMaterial({ color, emissive, emissiveIntensity: 0.4, roughness: 0.8 });
+  const mat = new THREE.MeshBasicMaterial({
+    color, transparent: true, opacity,
+    blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.BackSide,
+  });
   return new THREE.Mesh(geo, mat);
 };
 
+// Outer Wilds inspired planets
 const buildSolarSystem = () => {
   const group = new THREE.Group();
   group.position.set(120, -40, -200);
 
-  // Estrela central — âmbar quente
-  const starGeo = new THREE.SphereGeometry(14, 32, 32);
-  const starMat = new THREE.MeshBasicMaterial({ color: 0xf5c842 });
-  const star = new THREE.Mesh(starGeo, starMat);
-  group.add(star);
+  // === SUN — warm amber like the Outer Wilds sun ===
+  const sunGeo = new THREE.SphereGeometry(14, 32, 32);
+  const sunMat = new THREE.MeshBasicMaterial({ color: 0xffc840 });
+  const sun = new THREE.Mesh(sunGeo, sunMat);
+  group.add(sun);
 
-  // Halo da estrela (glow)
-  const glowGeo = new THREE.SphereGeometry(22, 32, 32);
-  const glowMat = new THREE.MeshBasicMaterial({
-    color: 0xf0a030,
-    transparent: true,
-    opacity: 0.08,
-    blending: THREE.AdditiveBlending,
-    depthWrite: false,
-    side: THREE.BackSide,
-  });
-  group.add(new THREE.Mesh(glowGeo, glowMat));
+  // Sun corona layers
+  group.add(createGlow(20, 0xffa020, 0.12));
+  group.add(createGlow(28, 0xff8010, 0.06));
+  group.add(createGlow(38, 0xff6000, 0.03));
 
-  // Luz pontual da estrela
-  const light = new THREE.PointLight(0xf5c842, 1.2, 600);
-  group.add(light);
+  // Sun light
+  const sunLight = new THREE.PointLight(0xffc840, 2.0, 800);
+  group.add(sunLight);
 
-  // Planetas: [raioOrbX, raioOrbY, tiltOrbita, raioPlanta, cor, velocidade]
-  const planetDefs = [
-    [55,  55,  0.15, 4,  0xc87040, 0.0018],  // rochoso quente
-    [95,  95,  0.08, 6,  0x7a5c8a, 0.0011],  // roxo-gasoso
-    [145, 145, 0.22, 5,  0x4a6e8a, 0.0007],  // azul-gelo
-    [200, 200, 0.05, 9,  0x8a6030, 0.0004],  // gigante âmbar
-    [260, 260, 0.18, 3,  0xb0a080, 0.0002],  // distante, pálido
+  // Planet definitions — Outer Wilds inspired
+  // [orbitR, tilt, radius, color, emissive, emissiveIntensity, orbitSpeed, spinSpeed, extras]
+  const planets = [
+    {
+      // Timber Hearth — earthy green/brown, home planet
+      orbit: 55, tilt: 0.15, radius: 5,
+      color: 0x4a7a3a, emissive: 0x2a4a1a, emissiveI: 0.5,
+      orbitSpeed: 0.0018, spinSpeed: 0.008,
+      glow: { radius: 7.5, color: 0x5a9a4a, opacity: 0.1 },
+    },
+    {
+      // Giant's Deep — deep ocean blue with swirling storms
+      orbit: 95, tilt: 0.08, radius: 9,
+      color: 0x1a4a7a, emissive: 0x0a3a6a, emissiveI: 0.6,
+      orbitSpeed: 0.0011, spinSpeed: 0.012,
+      glow: { radius: 13, color: 0x2a6aaa, opacity: 0.12 },
+    },
+    {
+      // Brittle Hollow — volcanic purple/magenta, crumbling
+      orbit: 145, tilt: 0.22, radius: 6,
+      color: 0x7a3a6a, emissive: 0xaa4040, emissiveI: 0.7,
+      orbitSpeed: 0.0007, spinSpeed: 0.006,
+      glow: { radius: 9, color: 0xcc5544, opacity: 0.1 },
+    },
+    {
+      // Dark Bramble — eerie pale green, mysterious
+      orbit: 200, tilt: 0.05, radius: 11,
+      color: 0x3a5a3a, emissive: 0x2a6a3a, emissiveI: 0.4,
+      orbitSpeed: 0.0004, spinSpeed: 0.003,
+      glow: { radius: 16, color: 0x4a8a5a, opacity: 0.08 },
+    },
+    {
+      // Ash Twin — sandy amber, close to sun feel
+      orbit: 260, tilt: 0.18, radius: 4,
+      color: 0xc89050, emissive: 0xa07030, emissiveI: 0.6,
+      orbitSpeed: 0.0002, spinSpeed: 0.01,
+      glow: { radius: 6, color: 0xe8a45a, opacity: 0.1 },
+    },
   ];
 
-  planetDefs.forEach(([rx, ry, tilt, r, color, speed]) => {
-    // Trilha
-    group.add(createOrbitRing(rx, ry, tilt));
+  planets.forEach((p) => {
+    group.add(createOrbitRing(p.orbit, p.orbit, p.tilt));
 
-    // Pivot para orbitar
     const pivot = new THREE.Group();
-    pivot.rotation.x = tilt;
-    const planet = createPlanet(r, color);
-    planet.position.x = rx;
-    pivot.add(planet);
+    pivot.rotation.x = p.tilt;
+
+    // Planet mesh — MeshBasicMaterial so it's always visible, no light dependency
+    const geo = new THREE.SphereGeometry(p.radius, 32, 32);
+    const mat = new THREE.MeshBasicMaterial({ color: p.color });
+    const mesh = new THREE.Mesh(geo, mat);
+    mesh.position.x = p.orbit;
+
+    // Emissive overlay — additive blended sphere slightly larger
+    const emGeo = new THREE.SphereGeometry(p.radius * 1.01, 32, 32);
+    const emMat = new THREE.MeshBasicMaterial({
+      color: p.emissive, transparent: true, opacity: p.emissiveI * 0.5,
+      blending: THREE.AdditiveBlending, depthWrite: false,
+    });
+    const emMesh = new THREE.Mesh(emGeo, emMat);
+    mesh.add(emMesh);
+
+    // Atmosphere glow
+    mesh.add(createGlow(p.glow.radius, p.glow.color, p.glow.opacity));
+
+    pivot.add(mesh);
     group.add(pivot);
-    orbitals.push({ pivot, speed });
+    orbitals.push({ pivot, speed: p.orbitSpeed });
+    planetMeshes.push({ mesh, spinSpeed: p.spinSpeed });
   });
 
   return group;
@@ -165,25 +195,20 @@ const initThree = () => {
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
   spaceCanvas.value.appendChild(renderer.domElement);
 
-  // Camadas de estrelas — distâncias e tamanhos variados para profundidade
-  const s1 = createStarLayer(3000, 3000, 0.8, 0.6, 0xfff0d0); // distantes, pequenas
-  const s2 = createStarLayer(1200, 2000, 1.4, 0.75, 0xf0d8a0); // médias
-  const s3 = createStarLayer(400,  1200, 2.2, 0.9,  0xffe8b0);  // próximas, brilhantes
+  // Star layers
+  const s1 = createStarLayer(3000, 3000, 0.8, 0.6, 0xfff0d0);
+  const s2 = createStarLayer(1200, 2000, 1.4, 0.75, 0xf0d8a0);
+  const s3 = createStarLayer(400, 1200, 2.2, 0.9, 0xffe8b0);
   layers.push(s1, s2, s3);
   scene.add(s1, s2, s3);
 
-  // Nebulosas como nuvens de partículas
-  // Vinho/vermelho — canto superior esquerdo
-  const n1 = createNebulaCloud(0x8b2a1a, 800, 180, -250, 150, -400, 0.18);
-  // Roxo profundo — canto inferior direito
-  const n2 = createNebulaCloud(0x4a1a6e, 1000, 220, 280, -180, -500, 0.15);
-  // Laranja queimado — centro, mais atrás
-  const n3 = createNebulaCloud(0xb84a10, 600, 140, 40, 60, -600, 0.12);
-  // Âmbar suave — espalhado
-  const n4 = createNebulaCloud(0xc87820, 400, 100, -100, -80, -350, 0.1);
-  scene.add(n1, n2, n3, n4);
+  // Nebulae
+  scene.add(createNebulaCloud(0x8b2a1a, 800, 180, -250, 150, -400, 0.18));
+  scene.add(createNebulaCloud(0x4a1a6e, 1000, 220, 280, -180, -500, 0.15));
+  scene.add(createNebulaCloud(0xb84a10, 600, 140, 40, 60, -600, 0.12));
+  scene.add(createNebulaCloud(0xc87820, 400, 100, -100, -80, -350, 0.1));
 
-  // Sistema solar com órbitas
+  // Solar system
   const ambientLight = new THREE.AmbientLight(0x1a1008, 0.6);
   scene.add(ambientLight);
   scene.add(buildSolarSystem());
@@ -192,7 +217,6 @@ const initThree = () => {
   window.addEventListener('resize', onResize);
   document.addEventListener('visibilitychange', handleVisibility);
 
-  // Watch for theme changes
   const observer = new MutationObserver(updateSceneTheme);
   observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
   updateSceneTheme();
@@ -219,7 +243,7 @@ const animate = () => {
   if (!isVisible) return;
   animationFrame = requestAnimationFrame(animate);
 
-  // Paralaxe suave entre camadas
+  // Star parallax
   layers[0].rotation.y += 0.00008;
   layers[0].rotation.x += 0.00003;
   layers[1].rotation.y += 0.00012;
@@ -227,10 +251,13 @@ const animate = () => {
   layers[2].rotation.y += 0.00018;
   layers[2].rotation.x += 0.00008;
 
-  // Órbitas dos planetas
+  // Planet orbits
   orbitals.forEach(({ pivot, speed }) => { pivot.rotation.y += speed; });
 
-  // Câmera segue o mouse levemente
+  // Planet spin
+  planetMeshes.forEach(({ mesh, spinSpeed }) => { mesh.rotation.y += spinSpeed; });
+
+  // Camera follows mouse
   camera.position.x += (mouseX * 40 - camera.position.x) * 0.02;
   camera.position.y += (-mouseY * 30 - camera.position.y) * 0.02;
   camera.lookAt(scene.position);

@@ -16,11 +16,9 @@ export default defineNuxtPlugin((nuxtApp) => {
       { property: 'og:description', content: () => t('seo.description') },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://gustavolacerda.dev.br' },
-      { property: 'og:image', content: 'https://gustavolacerda.dev.br/me.png' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: () => t('seo.title') },
       { name: 'twitter:description', content: () => t('seo.description') },
-      { name: 'twitter:image', content: 'https://gustavolacerda.dev.br/me.png' },
       { name: 'theme-color', content: '#0d0a08' }
     ],
     link: [

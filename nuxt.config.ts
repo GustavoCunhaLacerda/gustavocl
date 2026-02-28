@@ -2,8 +2,13 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    'nuxt-og-image'
   ],
+  site: {
+    url: 'https://gustavolacerda.dev.br'
+  },
+  ogImage: {},
   postcss: {
     plugins: {
       tailwindcss: {},
