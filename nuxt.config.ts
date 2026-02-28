@@ -30,6 +30,7 @@ export default defineNuxtConfig({
     '~/assets/css/main.scss'
   ],
   app: {
+    baseURL: '/gustavocl/',
     head: {
       title: 'Gustavo Cunha Lacerda | Portfólio',
       meta: [
@@ -39,7 +40,7 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#0d0a08' }
       ],
       link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/gustavocl/favicon.svg' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;500;600;700&display=swap' }
       ]
     }
