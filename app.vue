@@ -20,12 +20,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
-defineOgImage({
-  title: 'Gustavo Cunha Lacerda',
-  description: 'Desenvolvedor Full Stack | Vue · Nuxt · React · .NET · PHP',
-  stack: 'Nuxt · Vue 3 · Three.js · GSAP · Tailwind CSS · TypeScript'
-});
-
 // Componentes
 import SpaceBackground from '~/components/SpaceBackground.vue';
 import MathEasterEgg from '~/components/MathEasterEgg.vue';
