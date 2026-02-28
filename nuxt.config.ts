@@ -30,7 +30,6 @@ export default defineNuxtConfig({
     '~/assets/css/main.scss'
   ],
   app: {
-    baseURL: '/gustavocl/',
     head: {
       title: 'Gustavo Cunha Lacerda | Portfólio',
       meta: [
