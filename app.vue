@@ -1,7 +1,7 @@
 <template>
   <div>
     <SpaceBackground />
-    <MathEasterEgg />
+    <MathEasterEggs />
     <RubiksCube />
     <NavBar />
     
@@ -22,7 +22,7 @@ import { ref, onMounted } from 'vue';
 
 // Componentes
 import SpaceBackground from '~/components/SpaceBackground.vue';
-import MathEasterEgg from '~/components/MathEasterEgg.vue';
+import MathEasterEggs from '~/components/MathEasterEggs.vue';
 import RubiksCube from '~/components/RubiksCube.vue';
 import NavBar from '~/components/NavBar.vue';
 import HeroSection from '~/components/HeroSection.vue';

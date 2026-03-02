@@ -106,5 +106,22 @@
         "description": "Modelo de machine learning para detecção de Deep Fakes com 93% de acurácia, treinado em ~5.600 vídeos. Publicado no 35º SIBGRAPI."
       }
     }
+  },
+  "mathEggs": {
+    "euler": "A identidade de Euler conecta os 5 números mais importantes da matemática numa única equação elegante.",
+    "gaussian": "A integral gaussiana é fundamental em probabilidade e estatística, base da distribuição normal.",
+    "fibonacci": "Cada número de Fibonacci é a soma dos dois anteriores. A sequência aparece em espirais da natureza.",
+    "basel": "O problema de Basel, resolvido por Euler em 1734, mostra que a soma dos inversos dos quadrados converge para π²/6.",
+    "eulerLimit": "Este limite define o número de Euler (e ≈ 2.718), base dos logaritmos naturais e do crescimento exponencial.",
+    "pythagoras": "O teorema de Pitágoras relaciona os lados de um triângulo retângulo. Conhecido há mais de 2500 anos.",
+    "maxwell": "A lei de Faraday-Maxwell descreve como campos elétricos variáveis geram campos magnéticos.",
+    "bayes": "O teorema de Bayes permite atualizar probabilidades com base em novas evidências. Fundamental em IA e estatística.",
+    "goldenRatio": "A razão áurea (φ ≈ 1.618) aparece na arte, arquitetura e natureza. É o limite da razão entre Fibonacci consecutivos.",
+    "quadratic": "A fórmula de Bhaskara resolve qualquer equação do segundo grau. Conhecida por todo estudante de matemática.",
+    "calculator": {
+      "help": "Operadores: + - * / ^ ( )\nConstantes: pi, e\nExemplos: 2^10, pi*3, (1+5)/2",
+      "invalidExpression": "Expressão inválida",
+      "placeholder": "Digite uma expressão..."
+    }
   }
 }

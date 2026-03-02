@@ -106,5 +106,22 @@
         "description": "Machine learning model for Deep Fake detection with 93% accuracy, trained on ~5,600 videos. Published at the 35th SIBGRAPI."
       }
     }
+  },
+  "mathEggs": {
+    "euler": "Euler's identity connects the 5 most important numbers in mathematics in a single elegant equation.",
+    "gaussian": "The Gaussian integral is fundamental in probability and statistics, the basis of the normal distribution.",
+    "fibonacci": "Each Fibonacci number is the sum of the two before it. The sequence appears in nature's spirals.",
+    "basel": "The Basel problem, solved by Euler in 1734, shows that the sum of inverse squares converges to π²/6.",
+    "eulerLimit": "This limit defines Euler's number (e ≈ 2.718), the base of natural logarithms and exponential growth.",
+    "pythagoras": "The Pythagorean theorem relates the sides of a right triangle. Known for over 2,500 years.",
+    "maxwell": "Faraday-Maxwell's law describes how changing electric fields generate magnetic fields.",
+    "bayes": "Bayes' theorem allows updating probabilities based on new evidence. Fundamental in AI and statistics.",
+    "goldenRatio": "The golden ratio (φ ≈ 1.618) appears in art, architecture, and nature. It's the limit of consecutive Fibonacci ratios.",
+    "quadratic": "The quadratic formula solves any second-degree equation. Known by every math student.",
+    "calculator": {
+      "help": "Operators: + - * / ^ ( )\nConstants: pi, e\nExamples: 2^10, pi*3, (1+5)/2",
+      "invalidExpression": "Invalid expression",
+      "placeholder": "Type an expression..."
+    }
   }
 }

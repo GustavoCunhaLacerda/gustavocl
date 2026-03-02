@@ -5,12 +5,15 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import * as THREE from 'three';
+import { addMathConstellations } from '~/utils/mathConstellations';
 
 const spaceCanvas = ref(null);
 let scene, camera, renderer;
 let animationFrame;
 let mouseX = 0, mouseY = 0;
+let rawMouseX = 0, rawMouseY = 0;
 let isVisible = true;
+let constellationsApi = null;
 
 const updateSceneTheme = () => {
   if (!scene) return;
@@ -18,6 +21,9 @@ const updateSceneTheme = () => {
   const bg = isLight ? 0xf5f0ea : 0x0d0a08;
   scene.background = new THREE.Color(bg);
   scene.fog = new THREE.FogExp2(bg, 0.0006);
+  if (constellationsApi) {
+    constellationsApi.updateTheme(isLight);
+  }
 };
 
 const createStarLayer = (count, spread, size, opacity, color) => {
@@ -213,6 +219,8 @@ const initThree = () => {
   scene.add(ambientLight);
   scene.add(buildSolarSystem());
 
+  constellationsApi = addMathConstellations(scene, camera, renderer);
+
   window.addEventListener('mousemove', onMouseMove);
   window.addEventListener('resize', onResize);
   document.addEventListener('visibilitychange', handleVisibility);
@@ -227,6 +235,8 @@ const initThree = () => {
 const onMouseMove = (e) => {
   mouseX = (e.clientX / window.innerWidth - 0.5) * 0.3;
   mouseY = (e.clientY / window.innerHeight - 0.5) * 0.2;
+  rawMouseX = (e.clientX / window.innerWidth) * 2 - 1;
+  rawMouseY = -(e.clientY / window.innerHeight) * 2 + 1;
 };
 
 const handleVisibility = () => {
@@ -262,6 +272,10 @@ const animate = () => {
   camera.position.y += (-mouseY * 30 - camera.position.y) * 0.02;
   camera.lookAt(scene.position);
 
+  if (constellationsApi) {
+    constellationsApi.update(rawMouseX, rawMouseY);
+  }
+
   renderer.render(scene, camera);
 };
 
@@ -277,6 +291,8 @@ onUnmounted(() => {
   window.removeEventListener('resize', onResize);
   document.removeEventListener('visibilitychange', handleVisibility);
   cancelAnimationFrame(animationFrame);
+  constellationsApi?.dispose();
+  constellationsApi = null;
   renderer?.dispose();
 });
 </script>
